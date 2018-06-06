@@ -1,0 +1,32 @@
+.animate{
+}
+
+.animate:after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    top: 9px;
+    z-index: -1;
+    display: block;
+    //animation-direction:alternate;
+    animation: pulse 5s infinite;
+    background-color: black;
+    border-radius: 100%;
+}
+
+@keyframes pulse{
+    
+    0%{
+        opacity:0.2;
+        box-shadow: 0 0 16px 4px rgba(0,0,0,0.8);
+    }
+    50%{
+        opacity:0.5;
+        box-shadow: 0 0 16px 2px rgba(0,0,0,0.8);
+    }
+    100%{
+        opacity:1;
+        box-shadow: 0 0 16px 8px rgba(0,0,0,0.8);
+    }
+    
+}

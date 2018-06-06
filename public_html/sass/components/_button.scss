@@ -1,0 +1,54 @@
+.btn{
+    display: inline-block;
+    padding: 10px 12px;
+    margin:0;
+    font-size: 14px;
+    outline: 0;
+    cursor: pointer;
+    @extend .z-depth-1;
+    
+    @each $color_name, $color in $colors {
+        @each $color_type, $color_value in $color {
+            
+            @if($color_type == 'default'){
+                &.btn-#{$color_name}{
+                    border:1px solid $color_value;
+                    color:lighten($color_value,40%);
+                    @if($color_name == 'default'){
+                        color:#4d4d4d;
+                    }
+                    background-color: $color_value;
+
+                    
+                    &.btn-outline{
+                        color:lighten($color_value,20%);
+                        @if($color_name == 'default'){
+                            color:#4d4d4d;
+                        }
+                        background-color: transparent;
+                        @extend .z-depth-0;
+                    }
+                    
+                    &.btn-rounded{
+                        border-radius:20px;
+                    }
+                    
+                    &:hover, &:focus{
+                        color:#fff;
+                        @if($color_name == 'default'){
+                            color:#000;
+                        }
+                        border:1px solid darken($color_value,10%);
+                        background-color: darken($color_value,10%);
+                    }
+                    
+                }
+            }
+        }
+    }
+    &.btn-xs{
+        box-sizing: border-box;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,102 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11 May, 2018, 4:19:30 PM
+    Author     : KAMAL
+*/
+
+$default:( 
+    'default': #e8e8e8,
+    'darken-1':darken(#e8e8e8, 10%),
+    'darken-2':darken(#e8e8e8, 15%),
+    'darken-3':darken(#e8e8e8, 20%)
+);
+$primary:( 
+    'default': #005dff,
+    'lighten-1': lighten(#005dff,10%),
+    'lighten-2': lighten(#005dff,15%),
+    'lighten-3': lighten(#005dff,20%),
+    'darken-1':darken(#005dff, 10%),
+    'darken-2':darken(#005dff, 15%),
+    'darken-3':darken(#005dff, 20%)
+);
+$success:( 
+    'default': #19b734,
+    'lighten-1': lighten(#19b734,10%),
+    'lighten-2': lighten(#19b734,15%),
+    'lighten-3': lighten(#19b734,20%),
+    'darken-1':darken(#19b734, 10%),
+    'darken-2':darken(#19b734, 15%),
+    'darken-3':darken(#19b734, 20%)
+);
+$danger:( 
+    'default': #ce1e18,
+    'lighten-1': lighten(#ce1e18,10%),
+    'lighten-2': lighten(#ce1e18,15%),
+    'lighten-3': lighten(#ce1e18,20%),
+    'darken-1':darken(#ce1e18, 10%),
+    'darken-2':darken(#ce1e18, 15%),
+    'darken-3':darken(#ce1e18, 20%)
+);
+$warning:( 
+    'default': #efc804,
+    'lighten-1': lighten(#efc804,10%),
+    'lighten-2': lighten(#efc804,15%),
+    'lighten-3': lighten(#efc804,20%),
+    'darken-1':darken(#efc804, 10%),
+    'darken-2':darken(#efc804, 15%),
+    'darken-3':darken(#efc804, 20%)
+);
+$orange:( 
+    'default': #ff9900,
+    'lighten-1': lighten(#ff9900,10%),
+    'lighten-2': lighten(#ff9900,15%),
+    'lighten-3': lighten(#ff9900,20%),
+    'darken-1':darken(#ff9900, 10%),
+    'darken-2':darken(#ff9900, 15%),
+    'darken-3':darken(#ff9900, 20%)
+);
+$bluevoilet:( 
+    'default': #8a2be2,
+    'lighten-1': lighten(#8a2be2,10%),
+    'lighten-2': lighten(#8a2be2,15%),
+    'lighten-3': lighten(#8a2be2,20%),
+    'darken-1':darken(#8a2be2, 10%),
+    'darken-2':darken(#8a2be2, 15%),
+    'darken-3':darken(#8a2be2, 20%)
+);
+$deeppink:( 
+    'default': #ff1493,
+    'lighten-1': lighten(#ff1493,10%),
+    'lighten-2': lighten(#ff1493,15%),
+    'lighten-3': lighten(#ff1493,20%),
+    'darken-1':darken(#ff1493, 10%),
+    'darken-2':darken(#ff1493, 15%),
+    'darken-3':darken(#ff1493, 20%)
+);
+
+
+$colors: (
+    "default": $default,
+    "primary": $primary,
+    "success": $success,
+    "danger": $danger,
+    "warning": $warning,
+    "orange": $orange,
+    "bluevoilet": $bluevoilet,
+    "deeppink": $deeppink
+) !default;
+
+
+@function color($color, $type){
+    @if map-has-key($colors, $color){
+        $curr_color : map-get($colors, $color);
+        @if($curr_color, $type){
+            @return map-get($curr_color, $type);
+        }
+    }
+    @return null;
+}

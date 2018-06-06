@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/stylish.css?v=1.0.1" rel="stylesheet" type="text/css"/>
+        <script src="plugins/jquery/jquery.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 col-sm-12">
+                    
+                    
+                    <div class="st-collapse">
+                        <div class="st-collapse-block">
+                            <div class="st-collapse-header">
+                                Collapse Header
+                            </div>
+                            <div class="st-collapse-body">Collapse Body</div>
+                        </div>
+                        <div class="st-collapse-block">
+                            <div class="st-collapse-header">Collapse Header</div>
+                            <div class="st-collapse-body">Collapse Body</div>
+                        </div>
+                        <div class="st-collapse-block st-collapse-active">
+                            <div class="st-collapse-header">Collapse Header</div>
+                            <div class="st-collapse-body">Collapse Body</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <script>
+            
+            
+            $(document).ready(function(){
+                $('.st-collapse .st-collapse-block').each(function(){
+                    var stCollapseHeader = $(this).children();
+                    
+                    if($(this).hasClass('st-collapse-active')){
+                        $(this).children('.st-collapse-header').append('<i class="material-icons m-r">expand_less</i>');
+                    }else{
+                        $(this).children('.st-collapse-header').append('<i class="material-icons m-r">expand_more</i>');
+                    }
+                }); 
+               
+               
+                $('.st-collapse-header').on('click',function(){;
+                    
+                    
+                    if($(this).parent().hasClass('st-collapse-active')){
+                        $('.st-collapse-block').removeClass('st-collapse-active');
+                        $('.st-collapse-header .m-r').text('expand_more');
+
+                        $(this).parent().removeClass('st-collapse-active');
+                        $(this).children('.m-r').text('expand_more');
+                        
+                    }else{
+                        $('.st-collapse-block').removeClass('st-collapse-active');
+                        $('.st-collapse-header .m-r').text('expand_more');
+
+                        $(this).parent().addClass('st-collapse-active');
+                        $(this).children('.m-r').text('expand_less');
+                    }
+                });
+            });
+            
+            
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,155 @@
+.st-nav{
+    display: block;
+    width:100%;
+    float:left;
+    height: 50px;
+    @extend .z-depth-1;    
+    
+    
+    .collapse.st-nav-collapse{
+        display:contents;
+    }
+    
+    @each $color_name, $color in $colors {
+        @each $color_type, $color_value in $color {
+            
+            @if($color_type == 'default'){
+                &.st-nav-#{$color_name}{
+                    
+                    @if($color_name != 'default'){
+                        background:$color_value;
+                    }@else{
+                        background-color: #fff;
+                    }
+                    
+                    .st-nav-header{
+                        float: left;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        line-height: 46px;
+                        font-size: 20px;
+                        font-weight: bold;
+                        
+                        span.st-nav-toogle{
+                            float: right;
+                            margin-top:11px;
+                            cursor: pointer;
+                            display: none;
+                        }
+                    }
+                    
+                    
+                    ul.st-nav-ul{
+                        margin:0;
+                        padding:0;
+
+                        li{
+                            float:left;
+                            list-style: none;
+
+                            a{
+                                display: block;
+                                padding-left:15px;
+                                padding-right: 15px;
+                                height: 50px;
+                                line-height: 50px;
+                                text-decoration: none;
+                                @if($color_name != 'default'){
+                                    color:lighten($color_value,40%);
+                                }@else{
+                                    color:#4d4d4d;
+                                }
+                                
+                                
+                                &:hover, &:focus{
+                                    @if($color_name != 'default'){
+                                        color:#fff;
+                                    }@else{
+                                        color:#000;
+                                    }
+                                }
+                            }
+                            
+                            
+                            &.st-drop{
+                                .st-dropdown-toggle{
+                                    @extend .z-depth-0;
+                                }
+                            }
+                        }
+                        
+                        &.st-nav-right{
+                            float: right;
+                            
+                            .st-drop{
+                                .st-dropdown-menu{
+                                    right:0;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+            }
+            
+        }
+    }  
+    
+    
+}
+
+
+    
+    
+@media #{$xs} {
+    .st-nav{
+        position: fixed;
+        top:0;
+        left:0;
+        height: auto;
+        z-index: 1030;
+        
+        .st-nav-header{
+            float: left;
+            width:100%;
+            
+            span.st-nav-toogle{
+                display: block !important;
+            }
+        }
+        
+        ul.st-nav-ul{
+            float:left !important;
+            
+            li{
+                width:100%;
+                
+                a{
+                    
+                }
+                
+                &.st-drop{
+                    .st-dropdown-toggle{
+                        float: left;
+                        width: 100%;
+                    }
+                    
+                    .st-dropdown-menu{
+                        position: unset;
+                    }
+                }
+            }
+            
+            
+        }
+        
+        .collapse.st-nav-collapse{
+            display: none;
+            border-top:1px solid #ddd;
+            
+            &.in{
+                display: block;
+            }
+        }
+    }
+}  

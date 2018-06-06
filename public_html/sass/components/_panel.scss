@@ -1,0 +1,39 @@
+.st-panel{
+    width:100%;
+    float: left;
+    display: block;
+    @extend .z-depth-1;
+    
+    
+    .st-panel-header, .st-panel-body, .st-panel-footer{
+        width:100%;
+        float: left;
+        display: block;
+        padding: 20px 15px;
+    }
+    
+    .st-panel-header{
+        border-bottom: 1px solid #ddd;
+    }
+    .st-panel-footer{
+        border-top: 1px solid #ddd;
+    }
+    
+    
+    @each $color_name, $color in $colors {
+        @each $color_type, $color_value in $color {
+            @if($color_type == 'default'){
+                &.st-panel-#{$color_name}{
+
+                    @if($color_name != 'default'){
+                        .st-panel-header{
+                            color:#fff;
+                            background-color:$color_value;
+                            border-bottom: 1px solid $color_value;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
