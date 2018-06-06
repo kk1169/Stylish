@@ -19,7 +19,7 @@ and open the template in the editor.
 .z-depth-0, .btn.btn-default.btn-outline, .btn.btn-primary.btn-outline, .btn.btn-success.btn-outline, .btn.btn-danger.btn-outline, .btn.btn-warning.btn-outline, .btn.btn-orange.btn-outline, .btn.btn-bluevoilet.btn-outline, .btn.btn-deeppink.btn-outline, .st-nav.st-nav-default ul.st-nav-ul li.st-drop .st-dropdown-toggle, .st-nav.st-nav-primary ul.st-nav-ul li.st-drop .st-dropdown-toggle, .st-nav.st-nav-success ul.st-nav-ul li.st-drop .st-dropdown-toggle, .st-nav.st-nav-danger ul.st-nav-ul li.st-drop .st-dropdown-toggle, .st-nav.st-nav-warning ul.st-nav-ul li.st-drop .st-dropdown-toggle, .st-nav.st-nav-orange ul.st-nav-ul li.st-drop .st-dropdown-toggle, .st-nav.st-nav-bluevoilet ul.st-nav-ul li.st-drop .st-dropdown-toggle, .st-nav.st-nav-deeppink ul.st-nav-ul li.st-drop .st-dropdown-toggle {
   box-shadow: none !important; }
 
-.z-depth-1, .btn, .st-tabs, .st-panel, .st-collapse, .st-drop .st-dropdown-toggle, .st-drop .st-dropdown-menu, .st-nav {
+.z-depth-1, .btn, .st-tabs, .st-panel, .st-collapse, .st-drop .st-dropdown-toggle, .st-drop .st-dropdown-menu, .st-nav, .st-cards {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
 
 .z-depth-1-half {
@@ -500,9 +500,7 @@ body {
   width: 100%;
   float: left;
   margin-top: 20px;
-  /*INPUT ADDON*/
-  /*CHECKBOX*/
-  /*REDIO*/ }
+  /*INPUT ADDON*/ }
   .st-form-group:first-child {
     margin-top: 0; }
   .st-form-group label {
@@ -542,605 +540,609 @@ body {
     height: 30px;
     padding: 0 8px 0 8px;
     font-size: 14px; }
-  .st-form-group .st-checkbox {
+
+/*CHECKBOX*/
+.st-checkbox {
+  float: left;
+  margin-right: -14px;
+  visibility: hidden; }
+  .st-checkbox + .st-checkbox-label {
+    width: 25px;
+    height: 25px;
+    display: block;
+    cursor: pointer;
+    border: 2px solid #cfcfcf; }
+  .st-checkbox.st-checkbox-default + .st-checkbox-label {
+    border: 2px solid #e8e8e8; }
+  .st-checkbox.st-checkbox-default + .st-checkbox-label {
+    border: 2px solid #cfcfcf; }
+  .st-checkbox.st-checkbox-default + .st-checkbox-label {
+    border: 2px solid #c2c2c2; }
+  .st-checkbox.st-checkbox-default + .st-checkbox-label {
+    border: 2px solid #b5b5b5; }
+  .st-checkbox.st-checkbox-primary + .st-checkbox-label {
+    border: 2px solid #005dff; }
+  .st-checkbox.st-checkbox-primary + .st-checkbox-label {
+    border: 2px solid #337dff; }
+  .st-checkbox.st-checkbox-primary + .st-checkbox-label {
+    border: 2px solid #4d8eff; }
+  .st-checkbox.st-checkbox-primary + .st-checkbox-label {
+    border: 2px solid #669eff; }
+  .st-checkbox.st-checkbox-primary + .st-checkbox-label {
+    border: 2px solid #004acc; }
+  .st-checkbox.st-checkbox-primary + .st-checkbox-label {
+    border: 2px solid #0041b3; }
+  .st-checkbox.st-checkbox-primary + .st-checkbox-label {
+    border: 2px solid #003899; }
+  .st-checkbox.st-checkbox-success + .st-checkbox-label {
+    border: 2px solid #19b734; }
+  .st-checkbox.st-checkbox-success + .st-checkbox-label {
+    border: 2px solid #22e143; }
+  .st-checkbox.st-checkbox-success + .st-checkbox-label {
+    border: 2px solid #39e456; }
+  .st-checkbox.st-checkbox-success + .st-checkbox-label {
+    border: 2px solid #4fe769; }
+  .st-checkbox.st-checkbox-success + .st-checkbox-label {
+    border: 2px solid #138a27; }
+  .st-checkbox.st-checkbox-success + .st-checkbox-label {
+    border: 2px solid #107421; }
+  .st-checkbox.st-checkbox-success + .st-checkbox-label {
+    border: 2px solid #0d5d1b; }
+  .st-checkbox.st-checkbox-danger + .st-checkbox-label {
+    border: 2px solid #ce1e18; }
+  .st-checkbox.st-checkbox-danger + .st-checkbox-label {
+    border: 2px solid #e73832; }
+  .st-checkbox.st-checkbox-danger + .st-checkbox-label {
+    border: 2px solid #ea4e49; }
+  .st-checkbox.st-checkbox-danger + .st-checkbox-label {
+    border: 2px solid #ec6460; }
+  .st-checkbox.st-checkbox-danger + .st-checkbox-label {
+    border: 2px solid #a01713; }
+  .st-checkbox.st-checkbox-danger + .st-checkbox-label {
+    border: 2px solid #891410; }
+  .st-checkbox.st-checkbox-danger + .st-checkbox-label {
+    border: 2px solid #73110d; }
+  .st-checkbox.st-checkbox-warning + .st-checkbox-label {
+    border: 2px solid #efc804; }
+  .st-checkbox.st-checkbox-warning + .st-checkbox-label {
+    border: 2px solid #fbd92b; }
+  .st-checkbox.st-checkbox-warning + .st-checkbox-label {
+    border: 2px solid #fcdd44; }
+  .st-checkbox.st-checkbox-warning + .st-checkbox-label {
+    border: 2px solid #fce25d; }
+  .st-checkbox.st-checkbox-warning + .st-checkbox-label {
+    border: 2px solid #bd9e03; }
+  .st-checkbox.st-checkbox-warning + .st-checkbox-label {
+    border: 2px solid #a48903; }
+  .st-checkbox.st-checkbox-warning + .st-checkbox-label {
+    border: 2px solid #8b7402; }
+  .st-checkbox.st-checkbox-orange + .st-checkbox-label {
+    border: 2px solid #ff9900; }
+  .st-checkbox.st-checkbox-orange + .st-checkbox-label {
+    border: 2px solid #ffad33; }
+  .st-checkbox.st-checkbox-orange + .st-checkbox-label {
+    border: 2px solid #ffb84d; }
+  .st-checkbox.st-checkbox-orange + .st-checkbox-label {
+    border: 2px solid #ffc266; }
+  .st-checkbox.st-checkbox-orange + .st-checkbox-label {
+    border: 2px solid #cc7a00; }
+  .st-checkbox.st-checkbox-orange + .st-checkbox-label {
+    border: 2px solid #b36b00; }
+  .st-checkbox.st-checkbox-orange + .st-checkbox-label {
+    border: 2px solid #995c00; }
+  .st-checkbox.st-checkbox-bluevoilet + .st-checkbox-label {
+    border: 2px solid #8a2be2; }
+  .st-checkbox.st-checkbox-bluevoilet + .st-checkbox-label {
+    border: 2px solid #a358e8; }
+  .st-checkbox.st-checkbox-bluevoilet + .st-checkbox-label {
+    border: 2px solid #af6eeb; }
+  .st-checkbox.st-checkbox-bluevoilet + .st-checkbox-label {
+    border: 2px solid #bc85ee; }
+  .st-checkbox.st-checkbox-bluevoilet + .st-checkbox-label {
+    border: 2px solid #701ac0; }
+  .st-checkbox.st-checkbox-bluevoilet + .st-checkbox-label {
+    border: 2px solid #6317a9; }
+  .st-checkbox.st-checkbox-bluevoilet + .st-checkbox-label {
+    border: 2px solid #561493; }
+  .st-checkbox.st-checkbox-deeppink + .st-checkbox-label {
+    border: 2px solid #ff1493; }
+  .st-checkbox.st-checkbox-deeppink + .st-checkbox-label {
+    border: 2px solid #ff47aa; }
+  .st-checkbox.st-checkbox-deeppink + .st-checkbox-label {
+    border: 2px solid #ff61b6; }
+  .st-checkbox.st-checkbox-deeppink + .st-checkbox-label {
+    border: 2px solid #ff7ac2; }
+  .st-checkbox.st-checkbox-deeppink + .st-checkbox-label {
+    border: 2px solid #e00079; }
+  .st-checkbox.st-checkbox-deeppink + .st-checkbox-label {
+    border: 2px solid #c7006b; }
+  .st-checkbox.st-checkbox-deeppink + .st-checkbox-label {
+    border: 2px solid #ad005d; }
+  .st-checkbox.st-active-checkbox + .st-checkbox-label {
+    background-color: #000;
+    border: 1px solid #000; }
+    .st-checkbox.st-active-checkbox + .st-checkbox-label:before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 15px;
+      border-top: 2px solid transparent;
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      border-left: 2px solid transparent;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      margin-top: 0px;
+      position: absolute;
+      left: 9px;
+      top: auto; }
+  .st-checkbox.st-checkbox-default.st-active-checkbox + .st-checkbox-label {
+    background-color: #e8e8e8;
+    border: 2px solid #e8e8e8; }
+  .st-checkbox.st-checkbox-default.st-active-checkbox + .st-checkbox-label {
+    background-color: #cfcfcf;
+    border: 2px solid #cfcfcf; }
+  .st-checkbox.st-checkbox-default.st-active-checkbox + .st-checkbox-label {
+    background-color: #c2c2c2;
+    border: 2px solid #c2c2c2; }
+  .st-checkbox.st-checkbox-default.st-active-checkbox + .st-checkbox-label {
+    background-color: #b5b5b5;
+    border: 2px solid #b5b5b5; }
+  .st-checkbox.st-checkbox-primary.st-active-checkbox + .st-checkbox-label {
+    background-color: #005dff;
+    border: 2px solid #005dff; }
+  .st-checkbox.st-checkbox-primary.st-active-checkbox + .st-checkbox-label {
+    background-color: #337dff;
+    border: 2px solid #337dff; }
+  .st-checkbox.st-checkbox-primary.st-active-checkbox + .st-checkbox-label {
+    background-color: #4d8eff;
+    border: 2px solid #4d8eff; }
+  .st-checkbox.st-checkbox-primary.st-active-checkbox + .st-checkbox-label {
+    background-color: #669eff;
+    border: 2px solid #669eff; }
+  .st-checkbox.st-checkbox-primary.st-active-checkbox + .st-checkbox-label {
+    background-color: #004acc;
+    border: 2px solid #004acc; }
+  .st-checkbox.st-checkbox-primary.st-active-checkbox + .st-checkbox-label {
+    background-color: #0041b3;
+    border: 2px solid #0041b3; }
+  .st-checkbox.st-checkbox-primary.st-active-checkbox + .st-checkbox-label {
+    background-color: #003899;
+    border: 2px solid #003899; }
+  .st-checkbox.st-checkbox-success.st-active-checkbox + .st-checkbox-label {
+    background-color: #19b734;
+    border: 2px solid #19b734; }
+  .st-checkbox.st-checkbox-success.st-active-checkbox + .st-checkbox-label {
+    background-color: #22e143;
+    border: 2px solid #22e143; }
+  .st-checkbox.st-checkbox-success.st-active-checkbox + .st-checkbox-label {
+    background-color: #39e456;
+    border: 2px solid #39e456; }
+  .st-checkbox.st-checkbox-success.st-active-checkbox + .st-checkbox-label {
+    background-color: #4fe769;
+    border: 2px solid #4fe769; }
+  .st-checkbox.st-checkbox-success.st-active-checkbox + .st-checkbox-label {
+    background-color: #138a27;
+    border: 2px solid #138a27; }
+  .st-checkbox.st-checkbox-success.st-active-checkbox + .st-checkbox-label {
+    background-color: #107421;
+    border: 2px solid #107421; }
+  .st-checkbox.st-checkbox-success.st-active-checkbox + .st-checkbox-label {
+    background-color: #0d5d1b;
+    border: 2px solid #0d5d1b; }
+  .st-checkbox.st-checkbox-danger.st-active-checkbox + .st-checkbox-label {
+    background-color: #ce1e18;
+    border: 2px solid #ce1e18; }
+  .st-checkbox.st-checkbox-danger.st-active-checkbox + .st-checkbox-label {
+    background-color: #e73832;
+    border: 2px solid #e73832; }
+  .st-checkbox.st-checkbox-danger.st-active-checkbox + .st-checkbox-label {
+    background-color: #ea4e49;
+    border: 2px solid #ea4e49; }
+  .st-checkbox.st-checkbox-danger.st-active-checkbox + .st-checkbox-label {
+    background-color: #ec6460;
+    border: 2px solid #ec6460; }
+  .st-checkbox.st-checkbox-danger.st-active-checkbox + .st-checkbox-label {
+    background-color: #a01713;
+    border: 2px solid #a01713; }
+  .st-checkbox.st-checkbox-danger.st-active-checkbox + .st-checkbox-label {
+    background-color: #891410;
+    border: 2px solid #891410; }
+  .st-checkbox.st-checkbox-danger.st-active-checkbox + .st-checkbox-label {
+    background-color: #73110d;
+    border: 2px solid #73110d; }
+  .st-checkbox.st-checkbox-warning.st-active-checkbox + .st-checkbox-label {
+    background-color: #efc804;
+    border: 2px solid #efc804; }
+  .st-checkbox.st-checkbox-warning.st-active-checkbox + .st-checkbox-label {
+    background-color: #fbd92b;
+    border: 2px solid #fbd92b; }
+  .st-checkbox.st-checkbox-warning.st-active-checkbox + .st-checkbox-label {
+    background-color: #fcdd44;
+    border: 2px solid #fcdd44; }
+  .st-checkbox.st-checkbox-warning.st-active-checkbox + .st-checkbox-label {
+    background-color: #fce25d;
+    border: 2px solid #fce25d; }
+  .st-checkbox.st-checkbox-warning.st-active-checkbox + .st-checkbox-label {
+    background-color: #bd9e03;
+    border: 2px solid #bd9e03; }
+  .st-checkbox.st-checkbox-warning.st-active-checkbox + .st-checkbox-label {
+    background-color: #a48903;
+    border: 2px solid #a48903; }
+  .st-checkbox.st-checkbox-warning.st-active-checkbox + .st-checkbox-label {
+    background-color: #8b7402;
+    border: 2px solid #8b7402; }
+  .st-checkbox.st-checkbox-orange.st-active-checkbox + .st-checkbox-label {
+    background-color: #ff9900;
+    border: 2px solid #ff9900; }
+  .st-checkbox.st-checkbox-orange.st-active-checkbox + .st-checkbox-label {
+    background-color: #ffad33;
+    border: 2px solid #ffad33; }
+  .st-checkbox.st-checkbox-orange.st-active-checkbox + .st-checkbox-label {
+    background-color: #ffb84d;
+    border: 2px solid #ffb84d; }
+  .st-checkbox.st-checkbox-orange.st-active-checkbox + .st-checkbox-label {
+    background-color: #ffc266;
+    border: 2px solid #ffc266; }
+  .st-checkbox.st-checkbox-orange.st-active-checkbox + .st-checkbox-label {
+    background-color: #cc7a00;
+    border: 2px solid #cc7a00; }
+  .st-checkbox.st-checkbox-orange.st-active-checkbox + .st-checkbox-label {
+    background-color: #b36b00;
+    border: 2px solid #b36b00; }
+  .st-checkbox.st-checkbox-orange.st-active-checkbox + .st-checkbox-label {
+    background-color: #995c00;
+    border: 2px solid #995c00; }
+  .st-checkbox.st-checkbox-bluevoilet.st-active-checkbox + .st-checkbox-label {
+    background-color: #8a2be2;
+    border: 2px solid #8a2be2; }
+  .st-checkbox.st-checkbox-bluevoilet.st-active-checkbox + .st-checkbox-label {
+    background-color: #a358e8;
+    border: 2px solid #a358e8; }
+  .st-checkbox.st-checkbox-bluevoilet.st-active-checkbox + .st-checkbox-label {
+    background-color: #af6eeb;
+    border: 2px solid #af6eeb; }
+  .st-checkbox.st-checkbox-bluevoilet.st-active-checkbox + .st-checkbox-label {
+    background-color: #bc85ee;
+    border: 2px solid #bc85ee; }
+  .st-checkbox.st-checkbox-bluevoilet.st-active-checkbox + .st-checkbox-label {
+    background-color: #701ac0;
+    border: 2px solid #701ac0; }
+  .st-checkbox.st-checkbox-bluevoilet.st-active-checkbox + .st-checkbox-label {
+    background-color: #6317a9;
+    border: 2px solid #6317a9; }
+  .st-checkbox.st-checkbox-bluevoilet.st-active-checkbox + .st-checkbox-label {
+    background-color: #561493;
+    border: 2px solid #561493; }
+  .st-checkbox.st-checkbox-deeppink.st-active-checkbox + .st-checkbox-label {
+    background-color: #ff1493;
+    border: 2px solid #ff1493; }
+  .st-checkbox.st-checkbox-deeppink.st-active-checkbox + .st-checkbox-label {
+    background-color: #ff47aa;
+    border: 2px solid #ff47aa; }
+  .st-checkbox.st-checkbox-deeppink.st-active-checkbox + .st-checkbox-label {
+    background-color: #ff61b6;
+    border: 2px solid #ff61b6; }
+  .st-checkbox.st-checkbox-deeppink.st-active-checkbox + .st-checkbox-label {
+    background-color: #ff7ac2;
+    border: 2px solid #ff7ac2; }
+  .st-checkbox.st-checkbox-deeppink.st-active-checkbox + .st-checkbox-label {
+    background-color: #e00079;
+    border: 2px solid #e00079; }
+  .st-checkbox.st-checkbox-deeppink.st-active-checkbox + .st-checkbox-label {
+    background-color: #c7006b;
+    border: 2px solid #c7006b; }
+  .st-checkbox.st-checkbox-deeppink.st-active-checkbox + .st-checkbox-label {
+    background-color: #ad005d;
+    border: 2px solid #ad005d; }
+  .st-checkbox ~ span {
     float: left;
-    margin-right: -14px;
-    visibility: hidden; }
-    .st-form-group .st-checkbox + .st-checkbox-label {
-      width: 25px;
-      height: 25px;
-      display: block;
-      cursor: pointer;
-      border: 2px solid #cfcfcf; }
-    .st-form-group .st-checkbox.st-checkbox-default + .st-checkbox-label {
-      border: 2px solid #e8e8e8; }
-    .st-form-group .st-checkbox.st-checkbox-default + .st-checkbox-label {
-      border: 2px solid #cfcfcf; }
-    .st-form-group .st-checkbox.st-checkbox-default + .st-checkbox-label {
-      border: 2px solid #c2c2c2; }
-    .st-form-group .st-checkbox.st-checkbox-default + .st-checkbox-label {
-      border: 2px solid #b5b5b5; }
-    .st-form-group .st-checkbox.st-checkbox-primary + .st-checkbox-label {
-      border: 2px solid #005dff; }
-    .st-form-group .st-checkbox.st-checkbox-primary + .st-checkbox-label {
-      border: 2px solid #337dff; }
-    .st-form-group .st-checkbox.st-checkbox-primary + .st-checkbox-label {
-      border: 2px solid #4d8eff; }
-    .st-form-group .st-checkbox.st-checkbox-primary + .st-checkbox-label {
-      border: 2px solid #669eff; }
-    .st-form-group .st-checkbox.st-checkbox-primary + .st-checkbox-label {
-      border: 2px solid #004acc; }
-    .st-form-group .st-checkbox.st-checkbox-primary + .st-checkbox-label {
-      border: 2px solid #0041b3; }
-    .st-form-group .st-checkbox.st-checkbox-primary + .st-checkbox-label {
-      border: 2px solid #003899; }
-    .st-form-group .st-checkbox.st-checkbox-success + .st-checkbox-label {
-      border: 2px solid #19b734; }
-    .st-form-group .st-checkbox.st-checkbox-success + .st-checkbox-label {
-      border: 2px solid #22e143; }
-    .st-form-group .st-checkbox.st-checkbox-success + .st-checkbox-label {
-      border: 2px solid #39e456; }
-    .st-form-group .st-checkbox.st-checkbox-success + .st-checkbox-label {
-      border: 2px solid #4fe769; }
-    .st-form-group .st-checkbox.st-checkbox-success + .st-checkbox-label {
-      border: 2px solid #138a27; }
-    .st-form-group .st-checkbox.st-checkbox-success + .st-checkbox-label {
-      border: 2px solid #107421; }
-    .st-form-group .st-checkbox.st-checkbox-success + .st-checkbox-label {
-      border: 2px solid #0d5d1b; }
-    .st-form-group .st-checkbox.st-checkbox-danger + .st-checkbox-label {
-      border: 2px solid #ce1e18; }
-    .st-form-group .st-checkbox.st-checkbox-danger + .st-checkbox-label {
-      border: 2px solid #e73832; }
-    .st-form-group .st-checkbox.st-checkbox-danger + .st-checkbox-label {
-      border: 2px solid #ea4e49; }
-    .st-form-group .st-checkbox.st-checkbox-danger + .st-checkbox-label {
-      border: 2px solid #ec6460; }
-    .st-form-group .st-checkbox.st-checkbox-danger + .st-checkbox-label {
-      border: 2px solid #a01713; }
-    .st-form-group .st-checkbox.st-checkbox-danger + .st-checkbox-label {
-      border: 2px solid #891410; }
-    .st-form-group .st-checkbox.st-checkbox-danger + .st-checkbox-label {
-      border: 2px solid #73110d; }
-    .st-form-group .st-checkbox.st-checkbox-warning + .st-checkbox-label {
-      border: 2px solid #efc804; }
-    .st-form-group .st-checkbox.st-checkbox-warning + .st-checkbox-label {
-      border: 2px solid #fbd92b; }
-    .st-form-group .st-checkbox.st-checkbox-warning + .st-checkbox-label {
-      border: 2px solid #fcdd44; }
-    .st-form-group .st-checkbox.st-checkbox-warning + .st-checkbox-label {
-      border: 2px solid #fce25d; }
-    .st-form-group .st-checkbox.st-checkbox-warning + .st-checkbox-label {
-      border: 2px solid #bd9e03; }
-    .st-form-group .st-checkbox.st-checkbox-warning + .st-checkbox-label {
-      border: 2px solid #a48903; }
-    .st-form-group .st-checkbox.st-checkbox-warning + .st-checkbox-label {
-      border: 2px solid #8b7402; }
-    .st-form-group .st-checkbox.st-checkbox-orange + .st-checkbox-label {
-      border: 2px solid #ff9900; }
-    .st-form-group .st-checkbox.st-checkbox-orange + .st-checkbox-label {
-      border: 2px solid #ffad33; }
-    .st-form-group .st-checkbox.st-checkbox-orange + .st-checkbox-label {
-      border: 2px solid #ffb84d; }
-    .st-form-group .st-checkbox.st-checkbox-orange + .st-checkbox-label {
-      border: 2px solid #ffc266; }
-    .st-form-group .st-checkbox.st-checkbox-orange + .st-checkbox-label {
-      border: 2px solid #cc7a00; }
-    .st-form-group .st-checkbox.st-checkbox-orange + .st-checkbox-label {
-      border: 2px solid #b36b00; }
-    .st-form-group .st-checkbox.st-checkbox-orange + .st-checkbox-label {
-      border: 2px solid #995c00; }
-    .st-form-group .st-checkbox.st-checkbox-bluevoilet + .st-checkbox-label {
-      border: 2px solid #8a2be2; }
-    .st-form-group .st-checkbox.st-checkbox-bluevoilet + .st-checkbox-label {
-      border: 2px solid #a358e8; }
-    .st-form-group .st-checkbox.st-checkbox-bluevoilet + .st-checkbox-label {
-      border: 2px solid #af6eeb; }
-    .st-form-group .st-checkbox.st-checkbox-bluevoilet + .st-checkbox-label {
-      border: 2px solid #bc85ee; }
-    .st-form-group .st-checkbox.st-checkbox-bluevoilet + .st-checkbox-label {
-      border: 2px solid #701ac0; }
-    .st-form-group .st-checkbox.st-checkbox-bluevoilet + .st-checkbox-label {
-      border: 2px solid #6317a9; }
-    .st-form-group .st-checkbox.st-checkbox-bluevoilet + .st-checkbox-label {
-      border: 2px solid #561493; }
-    .st-form-group .st-checkbox.st-checkbox-deeppink + .st-checkbox-label {
-      border: 2px solid #ff1493; }
-    .st-form-group .st-checkbox.st-checkbox-deeppink + .st-checkbox-label {
-      border: 2px solid #ff47aa; }
-    .st-form-group .st-checkbox.st-checkbox-deeppink + .st-checkbox-label {
-      border: 2px solid #ff61b6; }
-    .st-form-group .st-checkbox.st-checkbox-deeppink + .st-checkbox-label {
-      border: 2px solid #ff7ac2; }
-    .st-form-group .st-checkbox.st-checkbox-deeppink + .st-checkbox-label {
-      border: 2px solid #e00079; }
-    .st-form-group .st-checkbox.st-checkbox-deeppink + .st-checkbox-label {
-      border: 2px solid #c7006b; }
-    .st-form-group .st-checkbox.st-checkbox-deeppink + .st-checkbox-label {
-      border: 2px solid #ad005d; }
-    .st-form-group .st-checkbox.st-active-checkbox + .st-checkbox-label {
-      background-color: #000;
-      border: 1px solid #000; }
-      .st-form-group .st-checkbox.st-active-checkbox + .st-checkbox-label:before {
-        content: '';
-        display: inline-block;
-        width: 8px;
-        height: 15px;
-        border-top: 2px solid transparent;
-        -ms-transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-        border-left: 2px solid transparent;
-        border-right: 2px solid #fff;
-        border-bottom: 2px solid #fff;
-        margin-top: 0px;
-        position: absolute;
-        left: 9px;
-        top: 2px; }
-    .st-form-group .st-checkbox.st-checkbox-default.st-active-checkbox + .st-checkbox-label {
-      background-color: #e8e8e8;
-      border: 2px solid #e8e8e8; }
-    .st-form-group .st-checkbox.st-checkbox-default.st-active-checkbox + .st-checkbox-label {
-      background-color: #cfcfcf;
-      border: 2px solid #cfcfcf; }
-    .st-form-group .st-checkbox.st-checkbox-default.st-active-checkbox + .st-checkbox-label {
-      background-color: #c2c2c2;
-      border: 2px solid #c2c2c2; }
-    .st-form-group .st-checkbox.st-checkbox-default.st-active-checkbox + .st-checkbox-label {
-      background-color: #b5b5b5;
-      border: 2px solid #b5b5b5; }
-    .st-form-group .st-checkbox.st-checkbox-primary.st-active-checkbox + .st-checkbox-label {
-      background-color: #005dff;
-      border: 2px solid #005dff; }
-    .st-form-group .st-checkbox.st-checkbox-primary.st-active-checkbox + .st-checkbox-label {
-      background-color: #337dff;
-      border: 2px solid #337dff; }
-    .st-form-group .st-checkbox.st-checkbox-primary.st-active-checkbox + .st-checkbox-label {
-      background-color: #4d8eff;
-      border: 2px solid #4d8eff; }
-    .st-form-group .st-checkbox.st-checkbox-primary.st-active-checkbox + .st-checkbox-label {
-      background-color: #669eff;
-      border: 2px solid #669eff; }
-    .st-form-group .st-checkbox.st-checkbox-primary.st-active-checkbox + .st-checkbox-label {
-      background-color: #004acc;
-      border: 2px solid #004acc; }
-    .st-form-group .st-checkbox.st-checkbox-primary.st-active-checkbox + .st-checkbox-label {
-      background-color: #0041b3;
-      border: 2px solid #0041b3; }
-    .st-form-group .st-checkbox.st-checkbox-primary.st-active-checkbox + .st-checkbox-label {
-      background-color: #003899;
-      border: 2px solid #003899; }
-    .st-form-group .st-checkbox.st-checkbox-success.st-active-checkbox + .st-checkbox-label {
-      background-color: #19b734;
-      border: 2px solid #19b734; }
-    .st-form-group .st-checkbox.st-checkbox-success.st-active-checkbox + .st-checkbox-label {
-      background-color: #22e143;
-      border: 2px solid #22e143; }
-    .st-form-group .st-checkbox.st-checkbox-success.st-active-checkbox + .st-checkbox-label {
-      background-color: #39e456;
-      border: 2px solid #39e456; }
-    .st-form-group .st-checkbox.st-checkbox-success.st-active-checkbox + .st-checkbox-label {
-      background-color: #4fe769;
-      border: 2px solid #4fe769; }
-    .st-form-group .st-checkbox.st-checkbox-success.st-active-checkbox + .st-checkbox-label {
-      background-color: #138a27;
-      border: 2px solid #138a27; }
-    .st-form-group .st-checkbox.st-checkbox-success.st-active-checkbox + .st-checkbox-label {
-      background-color: #107421;
-      border: 2px solid #107421; }
-    .st-form-group .st-checkbox.st-checkbox-success.st-active-checkbox + .st-checkbox-label {
-      background-color: #0d5d1b;
-      border: 2px solid #0d5d1b; }
-    .st-form-group .st-checkbox.st-checkbox-danger.st-active-checkbox + .st-checkbox-label {
-      background-color: #ce1e18;
-      border: 2px solid #ce1e18; }
-    .st-form-group .st-checkbox.st-checkbox-danger.st-active-checkbox + .st-checkbox-label {
-      background-color: #e73832;
-      border: 2px solid #e73832; }
-    .st-form-group .st-checkbox.st-checkbox-danger.st-active-checkbox + .st-checkbox-label {
-      background-color: #ea4e49;
-      border: 2px solid #ea4e49; }
-    .st-form-group .st-checkbox.st-checkbox-danger.st-active-checkbox + .st-checkbox-label {
-      background-color: #ec6460;
-      border: 2px solid #ec6460; }
-    .st-form-group .st-checkbox.st-checkbox-danger.st-active-checkbox + .st-checkbox-label {
-      background-color: #a01713;
-      border: 2px solid #a01713; }
-    .st-form-group .st-checkbox.st-checkbox-danger.st-active-checkbox + .st-checkbox-label {
-      background-color: #891410;
-      border: 2px solid #891410; }
-    .st-form-group .st-checkbox.st-checkbox-danger.st-active-checkbox + .st-checkbox-label {
-      background-color: #73110d;
-      border: 2px solid #73110d; }
-    .st-form-group .st-checkbox.st-checkbox-warning.st-active-checkbox + .st-checkbox-label {
-      background-color: #efc804;
-      border: 2px solid #efc804; }
-    .st-form-group .st-checkbox.st-checkbox-warning.st-active-checkbox + .st-checkbox-label {
-      background-color: #fbd92b;
-      border: 2px solid #fbd92b; }
-    .st-form-group .st-checkbox.st-checkbox-warning.st-active-checkbox + .st-checkbox-label {
-      background-color: #fcdd44;
-      border: 2px solid #fcdd44; }
-    .st-form-group .st-checkbox.st-checkbox-warning.st-active-checkbox + .st-checkbox-label {
-      background-color: #fce25d;
-      border: 2px solid #fce25d; }
-    .st-form-group .st-checkbox.st-checkbox-warning.st-active-checkbox + .st-checkbox-label {
-      background-color: #bd9e03;
-      border: 2px solid #bd9e03; }
-    .st-form-group .st-checkbox.st-checkbox-warning.st-active-checkbox + .st-checkbox-label {
-      background-color: #a48903;
-      border: 2px solid #a48903; }
-    .st-form-group .st-checkbox.st-checkbox-warning.st-active-checkbox + .st-checkbox-label {
-      background-color: #8b7402;
-      border: 2px solid #8b7402; }
-    .st-form-group .st-checkbox.st-checkbox-orange.st-active-checkbox + .st-checkbox-label {
-      background-color: #ff9900;
-      border: 2px solid #ff9900; }
-    .st-form-group .st-checkbox.st-checkbox-orange.st-active-checkbox + .st-checkbox-label {
-      background-color: #ffad33;
-      border: 2px solid #ffad33; }
-    .st-form-group .st-checkbox.st-checkbox-orange.st-active-checkbox + .st-checkbox-label {
-      background-color: #ffb84d;
-      border: 2px solid #ffb84d; }
-    .st-form-group .st-checkbox.st-checkbox-orange.st-active-checkbox + .st-checkbox-label {
-      background-color: #ffc266;
-      border: 2px solid #ffc266; }
-    .st-form-group .st-checkbox.st-checkbox-orange.st-active-checkbox + .st-checkbox-label {
-      background-color: #cc7a00;
-      border: 2px solid #cc7a00; }
-    .st-form-group .st-checkbox.st-checkbox-orange.st-active-checkbox + .st-checkbox-label {
-      background-color: #b36b00;
-      border: 2px solid #b36b00; }
-    .st-form-group .st-checkbox.st-checkbox-orange.st-active-checkbox + .st-checkbox-label {
-      background-color: #995c00;
-      border: 2px solid #995c00; }
-    .st-form-group .st-checkbox.st-checkbox-bluevoilet.st-active-checkbox + .st-checkbox-label {
-      background-color: #8a2be2;
-      border: 2px solid #8a2be2; }
-    .st-form-group .st-checkbox.st-checkbox-bluevoilet.st-active-checkbox + .st-checkbox-label {
-      background-color: #a358e8;
-      border: 2px solid #a358e8; }
-    .st-form-group .st-checkbox.st-checkbox-bluevoilet.st-active-checkbox + .st-checkbox-label {
-      background-color: #af6eeb;
-      border: 2px solid #af6eeb; }
-    .st-form-group .st-checkbox.st-checkbox-bluevoilet.st-active-checkbox + .st-checkbox-label {
-      background-color: #bc85ee;
-      border: 2px solid #bc85ee; }
-    .st-form-group .st-checkbox.st-checkbox-bluevoilet.st-active-checkbox + .st-checkbox-label {
-      background-color: #701ac0;
-      border: 2px solid #701ac0; }
-    .st-form-group .st-checkbox.st-checkbox-bluevoilet.st-active-checkbox + .st-checkbox-label {
-      background-color: #6317a9;
-      border: 2px solid #6317a9; }
-    .st-form-group .st-checkbox.st-checkbox-bluevoilet.st-active-checkbox + .st-checkbox-label {
-      background-color: #561493;
-      border: 2px solid #561493; }
-    .st-form-group .st-checkbox.st-checkbox-deeppink.st-active-checkbox + .st-checkbox-label {
-      background-color: #ff1493;
-      border: 2px solid #ff1493; }
-    .st-form-group .st-checkbox.st-checkbox-deeppink.st-active-checkbox + .st-checkbox-label {
-      background-color: #ff47aa;
-      border: 2px solid #ff47aa; }
-    .st-form-group .st-checkbox.st-checkbox-deeppink.st-active-checkbox + .st-checkbox-label {
-      background-color: #ff61b6;
-      border: 2px solid #ff61b6; }
-    .st-form-group .st-checkbox.st-checkbox-deeppink.st-active-checkbox + .st-checkbox-label {
-      background-color: #ff7ac2;
-      border: 2px solid #ff7ac2; }
-    .st-form-group .st-checkbox.st-checkbox-deeppink.st-active-checkbox + .st-checkbox-label {
-      background-color: #e00079;
-      border: 2px solid #e00079; }
-    .st-form-group .st-checkbox.st-checkbox-deeppink.st-active-checkbox + .st-checkbox-label {
-      background-color: #c7006b;
-      border: 2px solid #c7006b; }
-    .st-form-group .st-checkbox.st-checkbox-deeppink.st-active-checkbox + .st-checkbox-label {
-      background-color: #ad005d;
-      border: 2px solid #ad005d; }
-    .st-form-group .st-checkbox ~ span {
-      float: left;
-      display: block;
-      margin-top: 5px;
-      margin-left: 10px; }
-  .st-form-group .st-radio {
+    display: block;
+    margin-top: 5px;
+    margin-left: 10px; }
+
+/*REDIO*/
+.st-radio {
+  float: left;
+  margin-right: -14px;
+  visibility: hidden; }
+  .st-radio + .st-radio-label {
+    width: 25px;
+    height: 25px;
+    display: block;
+    cursor: pointer;
+    border-radius: 100%;
+    border: 2px solid #ccc; }
+  .st-radio.st-radio-default + .st-radio-label {
+    border: 2px solid #e8e8e8; }
+  .st-radio.st-radio-default + .st-radio-label {
+    border: 2px solid #cfcfcf; }
+  .st-radio.st-radio-default + .st-radio-label {
+    border: 2px solid #c2c2c2; }
+  .st-radio.st-radio-default + .st-radio-label {
+    border: 2px solid #b5b5b5; }
+  .st-radio.st-radio-primary + .st-radio-label {
+    border: 2px solid #005dff; }
+  .st-radio.st-radio-primary + .st-radio-label {
+    border: 2px solid #337dff; }
+  .st-radio.st-radio-primary + .st-radio-label {
+    border: 2px solid #4d8eff; }
+  .st-radio.st-radio-primary + .st-radio-label {
+    border: 2px solid #669eff; }
+  .st-radio.st-radio-primary + .st-radio-label {
+    border: 2px solid #004acc; }
+  .st-radio.st-radio-primary + .st-radio-label {
+    border: 2px solid #0041b3; }
+  .st-radio.st-radio-primary + .st-radio-label {
+    border: 2px solid #003899; }
+  .st-radio.st-radio-success + .st-radio-label {
+    border: 2px solid #19b734; }
+  .st-radio.st-radio-success + .st-radio-label {
+    border: 2px solid #22e143; }
+  .st-radio.st-radio-success + .st-radio-label {
+    border: 2px solid #39e456; }
+  .st-radio.st-radio-success + .st-radio-label {
+    border: 2px solid #4fe769; }
+  .st-radio.st-radio-success + .st-radio-label {
+    border: 2px solid #138a27; }
+  .st-radio.st-radio-success + .st-radio-label {
+    border: 2px solid #107421; }
+  .st-radio.st-radio-success + .st-radio-label {
+    border: 2px solid #0d5d1b; }
+  .st-radio.st-radio-danger + .st-radio-label {
+    border: 2px solid #ce1e18; }
+  .st-radio.st-radio-danger + .st-radio-label {
+    border: 2px solid #e73832; }
+  .st-radio.st-radio-danger + .st-radio-label {
+    border: 2px solid #ea4e49; }
+  .st-radio.st-radio-danger + .st-radio-label {
+    border: 2px solid #ec6460; }
+  .st-radio.st-radio-danger + .st-radio-label {
+    border: 2px solid #a01713; }
+  .st-radio.st-radio-danger + .st-radio-label {
+    border: 2px solid #891410; }
+  .st-radio.st-radio-danger + .st-radio-label {
+    border: 2px solid #73110d; }
+  .st-radio.st-radio-warning + .st-radio-label {
+    border: 2px solid #efc804; }
+  .st-radio.st-radio-warning + .st-radio-label {
+    border: 2px solid #fbd92b; }
+  .st-radio.st-radio-warning + .st-radio-label {
+    border: 2px solid #fcdd44; }
+  .st-radio.st-radio-warning + .st-radio-label {
+    border: 2px solid #fce25d; }
+  .st-radio.st-radio-warning + .st-radio-label {
+    border: 2px solid #bd9e03; }
+  .st-radio.st-radio-warning + .st-radio-label {
+    border: 2px solid #a48903; }
+  .st-radio.st-radio-warning + .st-radio-label {
+    border: 2px solid #8b7402; }
+  .st-radio.st-radio-orange + .st-radio-label {
+    border: 2px solid #ff9900; }
+  .st-radio.st-radio-orange + .st-radio-label {
+    border: 2px solid #ffad33; }
+  .st-radio.st-radio-orange + .st-radio-label {
+    border: 2px solid #ffb84d; }
+  .st-radio.st-radio-orange + .st-radio-label {
+    border: 2px solid #ffc266; }
+  .st-radio.st-radio-orange + .st-radio-label {
+    border: 2px solid #cc7a00; }
+  .st-radio.st-radio-orange + .st-radio-label {
+    border: 2px solid #b36b00; }
+  .st-radio.st-radio-orange + .st-radio-label {
+    border: 2px solid #995c00; }
+  .st-radio.st-radio-bluevoilet + .st-radio-label {
+    border: 2px solid #8a2be2; }
+  .st-radio.st-radio-bluevoilet + .st-radio-label {
+    border: 2px solid #a358e8; }
+  .st-radio.st-radio-bluevoilet + .st-radio-label {
+    border: 2px solid #af6eeb; }
+  .st-radio.st-radio-bluevoilet + .st-radio-label {
+    border: 2px solid #bc85ee; }
+  .st-radio.st-radio-bluevoilet + .st-radio-label {
+    border: 2px solid #701ac0; }
+  .st-radio.st-radio-bluevoilet + .st-radio-label {
+    border: 2px solid #6317a9; }
+  .st-radio.st-radio-bluevoilet + .st-radio-label {
+    border: 2px solid #561493; }
+  .st-radio.st-radio-deeppink + .st-radio-label {
+    border: 2px solid #ff1493; }
+  .st-radio.st-radio-deeppink + .st-radio-label {
+    border: 2px solid #ff47aa; }
+  .st-radio.st-radio-deeppink + .st-radio-label {
+    border: 2px solid #ff61b6; }
+  .st-radio.st-radio-deeppink + .st-radio-label {
+    border: 2px solid #ff7ac2; }
+  .st-radio.st-radio-deeppink + .st-radio-label {
+    border: 2px solid #e00079; }
+  .st-radio.st-radio-deeppink + .st-radio-label {
+    border: 2px solid #c7006b; }
+  .st-radio.st-radio-deeppink + .st-radio-label {
+    border: 2px solid #ad005d; }
+  .st-radio.st-active-radio + .st-radio-label {
+    background-color: #000;
+    border: 1px solid #000; }
+    .st-radio.st-active-radio + .st-radio-label:before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 15px;
+      border-top: 2px solid transparent;
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      border-left: 2px solid transparent;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      margin-top: 0px;
+      position: absolute;
+      left: 9px;
+      top: 3px; }
+  .st-radio.st-radio-default.st-active-radio + .st-radio-label {
+    background-color: #e8e8e8;
+    border: 2px solid #e8e8e8; }
+  .st-radio.st-radio-default.st-active-radio + .st-radio-label {
+    background-color: #cfcfcf;
+    border: 2px solid #cfcfcf; }
+  .st-radio.st-radio-default.st-active-radio + .st-radio-label {
+    background-color: #c2c2c2;
+    border: 2px solid #c2c2c2; }
+  .st-radio.st-radio-default.st-active-radio + .st-radio-label {
+    background-color: #b5b5b5;
+    border: 2px solid #b5b5b5; }
+  .st-radio.st-radio-primary.st-active-radio + .st-radio-label {
+    background-color: #005dff;
+    border: 2px solid #005dff; }
+  .st-radio.st-radio-primary.st-active-radio + .st-radio-label {
+    background-color: #337dff;
+    border: 2px solid #337dff; }
+  .st-radio.st-radio-primary.st-active-radio + .st-radio-label {
+    background-color: #4d8eff;
+    border: 2px solid #4d8eff; }
+  .st-radio.st-radio-primary.st-active-radio + .st-radio-label {
+    background-color: #669eff;
+    border: 2px solid #669eff; }
+  .st-radio.st-radio-primary.st-active-radio + .st-radio-label {
+    background-color: #004acc;
+    border: 2px solid #004acc; }
+  .st-radio.st-radio-primary.st-active-radio + .st-radio-label {
+    background-color: #0041b3;
+    border: 2px solid #0041b3; }
+  .st-radio.st-radio-primary.st-active-radio + .st-radio-label {
+    background-color: #003899;
+    border: 2px solid #003899; }
+  .st-radio.st-radio-success.st-active-radio + .st-radio-label {
+    background-color: #19b734;
+    border: 2px solid #19b734; }
+  .st-radio.st-radio-success.st-active-radio + .st-radio-label {
+    background-color: #22e143;
+    border: 2px solid #22e143; }
+  .st-radio.st-radio-success.st-active-radio + .st-radio-label {
+    background-color: #39e456;
+    border: 2px solid #39e456; }
+  .st-radio.st-radio-success.st-active-radio + .st-radio-label {
+    background-color: #4fe769;
+    border: 2px solid #4fe769; }
+  .st-radio.st-radio-success.st-active-radio + .st-radio-label {
+    background-color: #138a27;
+    border: 2px solid #138a27; }
+  .st-radio.st-radio-success.st-active-radio + .st-radio-label {
+    background-color: #107421;
+    border: 2px solid #107421; }
+  .st-radio.st-radio-success.st-active-radio + .st-radio-label {
+    background-color: #0d5d1b;
+    border: 2px solid #0d5d1b; }
+  .st-radio.st-radio-danger.st-active-radio + .st-radio-label {
+    background-color: #ce1e18;
+    border: 2px solid #ce1e18; }
+  .st-radio.st-radio-danger.st-active-radio + .st-radio-label {
+    background-color: #e73832;
+    border: 2px solid #e73832; }
+  .st-radio.st-radio-danger.st-active-radio + .st-radio-label {
+    background-color: #ea4e49;
+    border: 2px solid #ea4e49; }
+  .st-radio.st-radio-danger.st-active-radio + .st-radio-label {
+    background-color: #ec6460;
+    border: 2px solid #ec6460; }
+  .st-radio.st-radio-danger.st-active-radio + .st-radio-label {
+    background-color: #a01713;
+    border: 2px solid #a01713; }
+  .st-radio.st-radio-danger.st-active-radio + .st-radio-label {
+    background-color: #891410;
+    border: 2px solid #891410; }
+  .st-radio.st-radio-danger.st-active-radio + .st-radio-label {
+    background-color: #73110d;
+    border: 2px solid #73110d; }
+  .st-radio.st-radio-warning.st-active-radio + .st-radio-label {
+    background-color: #efc804;
+    border: 2px solid #efc804; }
+  .st-radio.st-radio-warning.st-active-radio + .st-radio-label {
+    background-color: #fbd92b;
+    border: 2px solid #fbd92b; }
+  .st-radio.st-radio-warning.st-active-radio + .st-radio-label {
+    background-color: #fcdd44;
+    border: 2px solid #fcdd44; }
+  .st-radio.st-radio-warning.st-active-radio + .st-radio-label {
+    background-color: #fce25d;
+    border: 2px solid #fce25d; }
+  .st-radio.st-radio-warning.st-active-radio + .st-radio-label {
+    background-color: #bd9e03;
+    border: 2px solid #bd9e03; }
+  .st-radio.st-radio-warning.st-active-radio + .st-radio-label {
+    background-color: #a48903;
+    border: 2px solid #a48903; }
+  .st-radio.st-radio-warning.st-active-radio + .st-radio-label {
+    background-color: #8b7402;
+    border: 2px solid #8b7402; }
+  .st-radio.st-radio-orange.st-active-radio + .st-radio-label {
+    background-color: #ff9900;
+    border: 2px solid #ff9900; }
+  .st-radio.st-radio-orange.st-active-radio + .st-radio-label {
+    background-color: #ffad33;
+    border: 2px solid #ffad33; }
+  .st-radio.st-radio-orange.st-active-radio + .st-radio-label {
+    background-color: #ffb84d;
+    border: 2px solid #ffb84d; }
+  .st-radio.st-radio-orange.st-active-radio + .st-radio-label {
+    background-color: #ffc266;
+    border: 2px solid #ffc266; }
+  .st-radio.st-radio-orange.st-active-radio + .st-radio-label {
+    background-color: #cc7a00;
+    border: 2px solid #cc7a00; }
+  .st-radio.st-radio-orange.st-active-radio + .st-radio-label {
+    background-color: #b36b00;
+    border: 2px solid #b36b00; }
+  .st-radio.st-radio-orange.st-active-radio + .st-radio-label {
+    background-color: #995c00;
+    border: 2px solid #995c00; }
+  .st-radio.st-radio-bluevoilet.st-active-radio + .st-radio-label {
+    background-color: #8a2be2;
+    border: 2px solid #8a2be2; }
+  .st-radio.st-radio-bluevoilet.st-active-radio + .st-radio-label {
+    background-color: #a358e8;
+    border: 2px solid #a358e8; }
+  .st-radio.st-radio-bluevoilet.st-active-radio + .st-radio-label {
+    background-color: #af6eeb;
+    border: 2px solid #af6eeb; }
+  .st-radio.st-radio-bluevoilet.st-active-radio + .st-radio-label {
+    background-color: #bc85ee;
+    border: 2px solid #bc85ee; }
+  .st-radio.st-radio-bluevoilet.st-active-radio + .st-radio-label {
+    background-color: #701ac0;
+    border: 2px solid #701ac0; }
+  .st-radio.st-radio-bluevoilet.st-active-radio + .st-radio-label {
+    background-color: #6317a9;
+    border: 2px solid #6317a9; }
+  .st-radio.st-radio-bluevoilet.st-active-radio + .st-radio-label {
+    background-color: #561493;
+    border: 2px solid #561493; }
+  .st-radio.st-radio-deeppink.st-active-radio + .st-radio-label {
+    background-color: #ff1493;
+    border: 2px solid #ff1493; }
+  .st-radio.st-radio-deeppink.st-active-radio + .st-radio-label {
+    background-color: #ff47aa;
+    border: 2px solid #ff47aa; }
+  .st-radio.st-radio-deeppink.st-active-radio + .st-radio-label {
+    background-color: #ff61b6;
+    border: 2px solid #ff61b6; }
+  .st-radio.st-radio-deeppink.st-active-radio + .st-radio-label {
+    background-color: #ff7ac2;
+    border: 2px solid #ff7ac2; }
+  .st-radio.st-radio-deeppink.st-active-radio + .st-radio-label {
+    background-color: #e00079;
+    border: 2px solid #e00079; }
+  .st-radio.st-radio-deeppink.st-active-radio + .st-radio-label {
+    background-color: #c7006b;
+    border: 2px solid #c7006b; }
+  .st-radio.st-radio-deeppink.st-active-radio + .st-radio-label {
+    background-color: #ad005d;
+    border: 2px solid #ad005d; }
+  .st-radio ~ span {
     float: left;
-    margin-right: -14px;
-    visibility: hidden; }
-    .st-form-group .st-radio + .st-radio-label {
-      width: 25px;
-      height: 25px;
-      display: block;
-      cursor: pointer;
-      border-radius: 100%;
-      border: 2px solid #ccc; }
-    .st-form-group .st-radio.st-radio-default + .st-radio-label {
-      border: 2px solid #e8e8e8; }
-    .st-form-group .st-radio.st-radio-default + .st-radio-label {
-      border: 2px solid #cfcfcf; }
-    .st-form-group .st-radio.st-radio-default + .st-radio-label {
-      border: 2px solid #c2c2c2; }
-    .st-form-group .st-radio.st-radio-default + .st-radio-label {
-      border: 2px solid #b5b5b5; }
-    .st-form-group .st-radio.st-radio-primary + .st-radio-label {
-      border: 2px solid #005dff; }
-    .st-form-group .st-radio.st-radio-primary + .st-radio-label {
-      border: 2px solid #337dff; }
-    .st-form-group .st-radio.st-radio-primary + .st-radio-label {
-      border: 2px solid #4d8eff; }
-    .st-form-group .st-radio.st-radio-primary + .st-radio-label {
-      border: 2px solid #669eff; }
-    .st-form-group .st-radio.st-radio-primary + .st-radio-label {
-      border: 2px solid #004acc; }
-    .st-form-group .st-radio.st-radio-primary + .st-radio-label {
-      border: 2px solid #0041b3; }
-    .st-form-group .st-radio.st-radio-primary + .st-radio-label {
-      border: 2px solid #003899; }
-    .st-form-group .st-radio.st-radio-success + .st-radio-label {
-      border: 2px solid #19b734; }
-    .st-form-group .st-radio.st-radio-success + .st-radio-label {
-      border: 2px solid #22e143; }
-    .st-form-group .st-radio.st-radio-success + .st-radio-label {
-      border: 2px solid #39e456; }
-    .st-form-group .st-radio.st-radio-success + .st-radio-label {
-      border: 2px solid #4fe769; }
-    .st-form-group .st-radio.st-radio-success + .st-radio-label {
-      border: 2px solid #138a27; }
-    .st-form-group .st-radio.st-radio-success + .st-radio-label {
-      border: 2px solid #107421; }
-    .st-form-group .st-radio.st-radio-success + .st-radio-label {
-      border: 2px solid #0d5d1b; }
-    .st-form-group .st-radio.st-radio-danger + .st-radio-label {
-      border: 2px solid #ce1e18; }
-    .st-form-group .st-radio.st-radio-danger + .st-radio-label {
-      border: 2px solid #e73832; }
-    .st-form-group .st-radio.st-radio-danger + .st-radio-label {
-      border: 2px solid #ea4e49; }
-    .st-form-group .st-radio.st-radio-danger + .st-radio-label {
-      border: 2px solid #ec6460; }
-    .st-form-group .st-radio.st-radio-danger + .st-radio-label {
-      border: 2px solid #a01713; }
-    .st-form-group .st-radio.st-radio-danger + .st-radio-label {
-      border: 2px solid #891410; }
-    .st-form-group .st-radio.st-radio-danger + .st-radio-label {
-      border: 2px solid #73110d; }
-    .st-form-group .st-radio.st-radio-warning + .st-radio-label {
-      border: 2px solid #efc804; }
-    .st-form-group .st-radio.st-radio-warning + .st-radio-label {
-      border: 2px solid #fbd92b; }
-    .st-form-group .st-radio.st-radio-warning + .st-radio-label {
-      border: 2px solid #fcdd44; }
-    .st-form-group .st-radio.st-radio-warning + .st-radio-label {
-      border: 2px solid #fce25d; }
-    .st-form-group .st-radio.st-radio-warning + .st-radio-label {
-      border: 2px solid #bd9e03; }
-    .st-form-group .st-radio.st-radio-warning + .st-radio-label {
-      border: 2px solid #a48903; }
-    .st-form-group .st-radio.st-radio-warning + .st-radio-label {
-      border: 2px solid #8b7402; }
-    .st-form-group .st-radio.st-radio-orange + .st-radio-label {
-      border: 2px solid #ff9900; }
-    .st-form-group .st-radio.st-radio-orange + .st-radio-label {
-      border: 2px solid #ffad33; }
-    .st-form-group .st-radio.st-radio-orange + .st-radio-label {
-      border: 2px solid #ffb84d; }
-    .st-form-group .st-radio.st-radio-orange + .st-radio-label {
-      border: 2px solid #ffc266; }
-    .st-form-group .st-radio.st-radio-orange + .st-radio-label {
-      border: 2px solid #cc7a00; }
-    .st-form-group .st-radio.st-radio-orange + .st-radio-label {
-      border: 2px solid #b36b00; }
-    .st-form-group .st-radio.st-radio-orange + .st-radio-label {
-      border: 2px solid #995c00; }
-    .st-form-group .st-radio.st-radio-bluevoilet + .st-radio-label {
-      border: 2px solid #8a2be2; }
-    .st-form-group .st-radio.st-radio-bluevoilet + .st-radio-label {
-      border: 2px solid #a358e8; }
-    .st-form-group .st-radio.st-radio-bluevoilet + .st-radio-label {
-      border: 2px solid #af6eeb; }
-    .st-form-group .st-radio.st-radio-bluevoilet + .st-radio-label {
-      border: 2px solid #bc85ee; }
-    .st-form-group .st-radio.st-radio-bluevoilet + .st-radio-label {
-      border: 2px solid #701ac0; }
-    .st-form-group .st-radio.st-radio-bluevoilet + .st-radio-label {
-      border: 2px solid #6317a9; }
-    .st-form-group .st-radio.st-radio-bluevoilet + .st-radio-label {
-      border: 2px solid #561493; }
-    .st-form-group .st-radio.st-radio-deeppink + .st-radio-label {
-      border: 2px solid #ff1493; }
-    .st-form-group .st-radio.st-radio-deeppink + .st-radio-label {
-      border: 2px solid #ff47aa; }
-    .st-form-group .st-radio.st-radio-deeppink + .st-radio-label {
-      border: 2px solid #ff61b6; }
-    .st-form-group .st-radio.st-radio-deeppink + .st-radio-label {
-      border: 2px solid #ff7ac2; }
-    .st-form-group .st-radio.st-radio-deeppink + .st-radio-label {
-      border: 2px solid #e00079; }
-    .st-form-group .st-radio.st-radio-deeppink + .st-radio-label {
-      border: 2px solid #c7006b; }
-    .st-form-group .st-radio.st-radio-deeppink + .st-radio-label {
-      border: 2px solid #ad005d; }
-    .st-form-group .st-radio.st-active-radio + .st-radio-label {
-      background-color: #000;
-      border: 1px solid #000; }
-      .st-form-group .st-radio.st-active-radio + .st-radio-label:before {
-        content: '';
-        display: inline-block;
-        width: 8px;
-        height: 15px;
-        border-top: 2px solid transparent;
-        -ms-transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-        border-left: 2px solid transparent;
-        border-right: 2px solid #fff;
-        border-bottom: 2px solid #fff;
-        margin-top: 0px;
-        position: absolute;
-        left: 9px;
-        top: 3px; }
-    .st-form-group .st-radio.st-radio-default.st-active-radio + .st-radio-label {
-      background-color: #e8e8e8;
-      border: 2px solid #e8e8e8; }
-    .st-form-group .st-radio.st-radio-default.st-active-radio + .st-radio-label {
-      background-color: #cfcfcf;
-      border: 2px solid #cfcfcf; }
-    .st-form-group .st-radio.st-radio-default.st-active-radio + .st-radio-label {
-      background-color: #c2c2c2;
-      border: 2px solid #c2c2c2; }
-    .st-form-group .st-radio.st-radio-default.st-active-radio + .st-radio-label {
-      background-color: #b5b5b5;
-      border: 2px solid #b5b5b5; }
-    .st-form-group .st-radio.st-radio-primary.st-active-radio + .st-radio-label {
-      background-color: #005dff;
-      border: 2px solid #005dff; }
-    .st-form-group .st-radio.st-radio-primary.st-active-radio + .st-radio-label {
-      background-color: #337dff;
-      border: 2px solid #337dff; }
-    .st-form-group .st-radio.st-radio-primary.st-active-radio + .st-radio-label {
-      background-color: #4d8eff;
-      border: 2px solid #4d8eff; }
-    .st-form-group .st-radio.st-radio-primary.st-active-radio + .st-radio-label {
-      background-color: #669eff;
-      border: 2px solid #669eff; }
-    .st-form-group .st-radio.st-radio-primary.st-active-radio + .st-radio-label {
-      background-color: #004acc;
-      border: 2px solid #004acc; }
-    .st-form-group .st-radio.st-radio-primary.st-active-radio + .st-radio-label {
-      background-color: #0041b3;
-      border: 2px solid #0041b3; }
-    .st-form-group .st-radio.st-radio-primary.st-active-radio + .st-radio-label {
-      background-color: #003899;
-      border: 2px solid #003899; }
-    .st-form-group .st-radio.st-radio-success.st-active-radio + .st-radio-label {
-      background-color: #19b734;
-      border: 2px solid #19b734; }
-    .st-form-group .st-radio.st-radio-success.st-active-radio + .st-radio-label {
-      background-color: #22e143;
-      border: 2px solid #22e143; }
-    .st-form-group .st-radio.st-radio-success.st-active-radio + .st-radio-label {
-      background-color: #39e456;
-      border: 2px solid #39e456; }
-    .st-form-group .st-radio.st-radio-success.st-active-radio + .st-radio-label {
-      background-color: #4fe769;
-      border: 2px solid #4fe769; }
-    .st-form-group .st-radio.st-radio-success.st-active-radio + .st-radio-label {
-      background-color: #138a27;
-      border: 2px solid #138a27; }
-    .st-form-group .st-radio.st-radio-success.st-active-radio + .st-radio-label {
-      background-color: #107421;
-      border: 2px solid #107421; }
-    .st-form-group .st-radio.st-radio-success.st-active-radio + .st-radio-label {
-      background-color: #0d5d1b;
-      border: 2px solid #0d5d1b; }
-    .st-form-group .st-radio.st-radio-danger.st-active-radio + .st-radio-label {
-      background-color: #ce1e18;
-      border: 2px solid #ce1e18; }
-    .st-form-group .st-radio.st-radio-danger.st-active-radio + .st-radio-label {
-      background-color: #e73832;
-      border: 2px solid #e73832; }
-    .st-form-group .st-radio.st-radio-danger.st-active-radio + .st-radio-label {
-      background-color: #ea4e49;
-      border: 2px solid #ea4e49; }
-    .st-form-group .st-radio.st-radio-danger.st-active-radio + .st-radio-label {
-      background-color: #ec6460;
-      border: 2px solid #ec6460; }
-    .st-form-group .st-radio.st-radio-danger.st-active-radio + .st-radio-label {
-      background-color: #a01713;
-      border: 2px solid #a01713; }
-    .st-form-group .st-radio.st-radio-danger.st-active-radio + .st-radio-label {
-      background-color: #891410;
-      border: 2px solid #891410; }
-    .st-form-group .st-radio.st-radio-danger.st-active-radio + .st-radio-label {
-      background-color: #73110d;
-      border: 2px solid #73110d; }
-    .st-form-group .st-radio.st-radio-warning.st-active-radio + .st-radio-label {
-      background-color: #efc804;
-      border: 2px solid #efc804; }
-    .st-form-group .st-radio.st-radio-warning.st-active-radio + .st-radio-label {
-      background-color: #fbd92b;
-      border: 2px solid #fbd92b; }
-    .st-form-group .st-radio.st-radio-warning.st-active-radio + .st-radio-label {
-      background-color: #fcdd44;
-      border: 2px solid #fcdd44; }
-    .st-form-group .st-radio.st-radio-warning.st-active-radio + .st-radio-label {
-      background-color: #fce25d;
-      border: 2px solid #fce25d; }
-    .st-form-group .st-radio.st-radio-warning.st-active-radio + .st-radio-label {
-      background-color: #bd9e03;
-      border: 2px solid #bd9e03; }
-    .st-form-group .st-radio.st-radio-warning.st-active-radio + .st-radio-label {
-      background-color: #a48903;
-      border: 2px solid #a48903; }
-    .st-form-group .st-radio.st-radio-warning.st-active-radio + .st-radio-label {
-      background-color: #8b7402;
-      border: 2px solid #8b7402; }
-    .st-form-group .st-radio.st-radio-orange.st-active-radio + .st-radio-label {
-      background-color: #ff9900;
-      border: 2px solid #ff9900; }
-    .st-form-group .st-radio.st-radio-orange.st-active-radio + .st-radio-label {
-      background-color: #ffad33;
-      border: 2px solid #ffad33; }
-    .st-form-group .st-radio.st-radio-orange.st-active-radio + .st-radio-label {
-      background-color: #ffb84d;
-      border: 2px solid #ffb84d; }
-    .st-form-group .st-radio.st-radio-orange.st-active-radio + .st-radio-label {
-      background-color: #ffc266;
-      border: 2px solid #ffc266; }
-    .st-form-group .st-radio.st-radio-orange.st-active-radio + .st-radio-label {
-      background-color: #cc7a00;
-      border: 2px solid #cc7a00; }
-    .st-form-group .st-radio.st-radio-orange.st-active-radio + .st-radio-label {
-      background-color: #b36b00;
-      border: 2px solid #b36b00; }
-    .st-form-group .st-radio.st-radio-orange.st-active-radio + .st-radio-label {
-      background-color: #995c00;
-      border: 2px solid #995c00; }
-    .st-form-group .st-radio.st-radio-bluevoilet.st-active-radio + .st-radio-label {
-      background-color: #8a2be2;
-      border: 2px solid #8a2be2; }
-    .st-form-group .st-radio.st-radio-bluevoilet.st-active-radio + .st-radio-label {
-      background-color: #a358e8;
-      border: 2px solid #a358e8; }
-    .st-form-group .st-radio.st-radio-bluevoilet.st-active-radio + .st-radio-label {
-      background-color: #af6eeb;
-      border: 2px solid #af6eeb; }
-    .st-form-group .st-radio.st-radio-bluevoilet.st-active-radio + .st-radio-label {
-      background-color: #bc85ee;
-      border: 2px solid #bc85ee; }
-    .st-form-group .st-radio.st-radio-bluevoilet.st-active-radio + .st-radio-label {
-      background-color: #701ac0;
-      border: 2px solid #701ac0; }
-    .st-form-group .st-radio.st-radio-bluevoilet.st-active-radio + .st-radio-label {
-      background-color: #6317a9;
-      border: 2px solid #6317a9; }
-    .st-form-group .st-radio.st-radio-bluevoilet.st-active-radio + .st-radio-label {
-      background-color: #561493;
-      border: 2px solid #561493; }
-    .st-form-group .st-radio.st-radio-deeppink.st-active-radio + .st-radio-label {
-      background-color: #ff1493;
-      border: 2px solid #ff1493; }
-    .st-form-group .st-radio.st-radio-deeppink.st-active-radio + .st-radio-label {
-      background-color: #ff47aa;
-      border: 2px solid #ff47aa; }
-    .st-form-group .st-radio.st-radio-deeppink.st-active-radio + .st-radio-label {
-      background-color: #ff61b6;
-      border: 2px solid #ff61b6; }
-    .st-form-group .st-radio.st-radio-deeppink.st-active-radio + .st-radio-label {
-      background-color: #ff7ac2;
-      border: 2px solid #ff7ac2; }
-    .st-form-group .st-radio.st-radio-deeppink.st-active-radio + .st-radio-label {
-      background-color: #e00079;
-      border: 2px solid #e00079; }
-    .st-form-group .st-radio.st-radio-deeppink.st-active-radio + .st-radio-label {
-      background-color: #c7006b;
-      border: 2px solid #c7006b; }
-    .st-form-group .st-radio.st-radio-deeppink.st-active-radio + .st-radio-label {
-      background-color: #ad005d;
-      border: 2px solid #ad005d; }
-    .st-form-group .st-radio ~ span {
-      float: left;
-      display: block;
-      margin-top: 5px;
-      margin-left: 10px; }
+    display: block;
+    margin-top: 5px;
+    margin-left: 10px; }
 
 .st-tabs {
   width: 100%;
@@ -1705,14 +1707,72 @@ body {
       border-top: 1px solid #ddd; }
       .st-nav .collapse.st-nav-collapse.in {
         display: block; } }
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 6 Jun, 2018, 5:12:52 PM
-    Author     : KAMAL
-*/
+.st-cards {
+  float: left;
+  display: block;
+  width: 100%; }
+  .st-cards .st-cards-header {
+    float: left;
+    display: block;
+    width: 100%;
+    padding: 15px; }
+  .st-cards .st-cards-body {
+    float: left;
+    width: 100%;
+    display: block; }
+    .st-cards .st-cards-body img {
+      width: 100%; }
+  .st-cards .st-cards-footer {
+    float: left;
+    width: 100%;
+    display: block;
+    padding: 15px; }
+
+.st-table {
+  float: left;
+  width: 100%;
+  /*TABLE HOVER*/ }
+  .st-table thead tr {
+    border-bottom: 2px solid #ddd; }
+    .st-table thead tr th, .st-table thead tr td {
+      position: relative;
+      font-weight: 500;
+      text-align: left;
+      padding-top: 8px;
+      vertical-align: middle;
+      padding-bottom: 8px; }
+  .st-table tbody tr {
+    border-bottom: 1px solid #ddd; }
+    .st-table tbody tr th, .st-table tbody tr td {
+      position: relative;
+      vertical-align: middle;
+      text-align: left;
+      padding-top: 8px;
+      padding-bottom: 8px; }
+  .st-table.st-table-hover tr:hover {
+    background-color: #f5f5f5; }
+
+/*ST PAGINATION*/
+.st-pagination {
+  float: left;
+  margin: 10px 0 0 0;
+  padding: 0px; }
+  .st-pagination li {
+    float: left;
+    list-style: none; }
+    .st-pagination li a {
+      display: block;
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      color: #4d4d4d;
+      text-decoration: none;
+      line-height: 35px;
+      margin-right: 5px;
+      border: 1px solid #ddd;
+      border-radius: 100%; }
+      .st-pagination li a:hover, .st-pagination li a:focus {
+        background-color: #f5f5f5;
+        color: #000; }
 
 /*# sourceMappingURL=stylish.css.map */

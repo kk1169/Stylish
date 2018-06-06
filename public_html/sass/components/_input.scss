@@ -154,149 +154,150 @@
         
     }
     
-    
-    
-    /*CHECKBOX*/
-    .st-checkbox{
-        float: left;
-        margin-right: -14px;
-        visibility: hidden;
-        
-    
-        & + .st-checkbox-label{
-            width:25px;
-            height: 25px;
-            display: block;
-            cursor: pointer;
-            border:2px solid color("default","darken-1");
-        }
-        
-        @each $color_name, $color in $colors {
-            @each $color_type, $color_value in $color {
-                &.st-checkbox-#{$color_name}{
-                    
-                    & + .st-checkbox-label{
-                        border:2px solid $color_value;
-                    }
-                }
-            }
-        }
-    
-        &.st-active-checkbox + .st-checkbox-label{
-            background-color:#000;
-            border:1px solid #000;
-            
-            &:before{
-                content: '';
-                display: inline-block;
-                width: 8px;
-                height: 15px;
-                border-top: 2px solid transparent;
-                -ms-transform: rotate(45deg);
-                -webkit-transform: rotate(45deg);
-                transform: rotate(45deg);
-                border-left: 2px solid transparent;
-                border-right: 2px solid #fff;
-                border-bottom: 2px solid #fff;
-                margin-top: 0px;
-                position: absolute;
-                left: 9px;
-                top: 2px;
-            }
-        }
-        
-
-        @each $color_name, $color in $colors {
-            @each $color_type, $color_value in $color {
-                &.st-checkbox-#{$color_name}{
-                    
-                    &.st-active-checkbox + .st-checkbox-label{
-                        background-color:$color_value;
-                        border:2px solid $color_value;
-                    }
-                }
-            }
-        }        
-        
-        & ~ span{
-            float: left;
-            display: block;
-            margin-top: 5px;
-            margin-left: 10px;
-        }
-        
-    }
-    
-    /*REDIO*/
-    .st-radio{
-        float: left;
-        margin-right: -14px;
-        visibility: hidden;
-        
-        
-    
-        & + .st-radio-label{
-            width:25px;
-            height: 25px;
-            display: block;
-            cursor: pointer;
-            border-radius: 100%;
-            border:2px solid #ccc;
-        }
-        
-        @each $color_name, $color in $colors {
-            @each $color_type, $color_value in $color {
-                &.st-radio-#{$color_name}{
-                    
-                    & + .st-radio-label{
-                        border:2px solid $color_value;
-                    }
-                }
-            }
-        }
-        
-        
-        &.st-active-radio + .st-radio-label{
-            background-color:#000;
-            border:1px solid #000;
-            
-            &:before{
-                content: '';
-                display: inline-block;
-                width: 8px;
-                height: 15px;
-                border-top: 2px solid transparent;
-                -ms-transform: rotate(45deg);
-                -webkit-transform: rotate(45deg);
-                transform: rotate(45deg);
-                border-left: 2px solid transparent;
-                border-right: 2px solid #fff;
-                border-bottom: 2px solid #fff;
-                margin-top: 0px;
-                position: absolute;
-                left: 9px;
-                top: 3px;
-            }
-        }
-        
-        @each $color_name, $color in $colors {
-            @each $color_type, $color_value in $color {
-                &.st-radio-#{$color_name}{
-                    
-                    &.st-active-radio + .st-radio-label{
-                        background-color:$color_value;
-                        border:2px solid $color_value;
-                    }
-                }
-            }
-        }        
-        
-        & ~ span{
-            float: left;
-            display: block;
-            margin-top: 5px;
-            margin-left: 10px;
-        }
-    }    
-    
+   
 }
+
+
+
+/*CHECKBOX*/
+.st-checkbox{
+    float: left;
+    margin-right: -14px;
+    visibility: hidden;
+
+
+    & + .st-checkbox-label{
+        width:25px;
+        height: 25px;
+        display: block;
+        cursor: pointer;
+        border:2px solid color("default","darken-1");
+    }
+
+    @each $color_name, $color in $colors {
+        @each $color_type, $color_value in $color {
+            &.st-checkbox-#{$color_name}{
+
+                & + .st-checkbox-label{
+                    border:2px solid $color_value;
+                }
+            }
+        }
+    }
+
+    &.st-active-checkbox + .st-checkbox-label{
+        background-color:#000;
+        border:1px solid #000;
+
+        &:before{
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 15px;
+            border-top: 2px solid transparent;
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            border-left: 2px solid transparent;
+            border-right: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            margin-top: 0px;
+            position: absolute;
+            left: 9px;
+            top: auto;
+        }
+    }
+
+
+    @each $color_name, $color in $colors {
+        @each $color_type, $color_value in $color {
+            &.st-checkbox-#{$color_name}{
+
+                &.st-active-checkbox + .st-checkbox-label{
+                    background-color:$color_value;
+                    border:2px solid $color_value;
+                }
+            }
+        }
+    }        
+
+    & ~ span{
+        float: left;
+        display: block;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+}
+
+/*REDIO*/
+.st-radio{
+    float: left;
+    margin-right: -14px;
+    visibility: hidden;
+
+
+
+    & + .st-radio-label{
+        width:25px;
+        height: 25px;
+        display: block;
+        cursor: pointer;
+        border-radius: 100%;
+        border:2px solid #ccc;
+    }
+
+    @each $color_name, $color in $colors {
+        @each $color_type, $color_value in $color {
+            &.st-radio-#{$color_name}{
+
+                & + .st-radio-label{
+                    border:2px solid $color_value;
+                }
+            }
+        }
+    }
+
+
+    &.st-active-radio + .st-radio-label{
+        background-color:#000;
+        border:1px solid #000;
+
+        &:before{
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 15px;
+            border-top: 2px solid transparent;
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            border-left: 2px solid transparent;
+            border-right: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            margin-top: 0px;
+            position: absolute;
+            left: 9px;
+            top: 3px;
+        }
+    }
+
+    @each $color_name, $color in $colors {
+        @each $color_type, $color_value in $color {
+            &.st-radio-#{$color_name}{
+
+                &.st-active-radio + .st-radio-label{
+                    background-color:$color_value;
+                    border:2px solid $color_value;
+                }
+            }
+        }
+    }        
+
+    & ~ span{
+        float: left;
+        display: block;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+}   
