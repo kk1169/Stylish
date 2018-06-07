@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/stylish.css" rel="stylesheet" type="text/css"/>
+        <script src="plugins/jquery/jquery.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        
+        
+        <div class="container">
+            <div class="st-slider">
+                <ul>
+                    <li class="st-slider-active">1</li>
+                    <li>2</li>
+                    <li class="st-slider-pre">3</li>
+                </ul>
+                <div class="st-slider-indicators">
+                <button class="st-slider-next">Next</button>
+                <button class="st-slider-pre">Previous</button>
+                </div>
+            </div>
+        </div>
+        <script src="js/slider.js" type="text/javascript"></script>
+        
+        
+        <script>
+            $('.st-slider-next').on('click',function(){
+                var stList = $('.st-slider ul').children('li').length;
+                var SelectedItem;
+                var SelectedItemPrev;
+                for (var i = 0; i< stList; i++){
+                    
+                    if($(".st-slider ul li:eq("+i+")").hasClass('st-slider-active')){
+                       SelectedItem = i;
+                    }
+                }
+                $('.st-slider ul li').removeClass('st-slider-active');
+                $('.st-slider ul li').removeClass('st-slider-pre');
+                
+                if(SelectedItem == (stList-1)){
+                    SelectedItem = 0;
+                    SelectedItemPrev = (stList-1);
+                }else{
+                    SelectedItem = (SelectedItem+1);
+                    SelectedItemPrev = SelectedItem-1;
+                }
+                
+                $(".st-slider ul li:eq("+SelectedItem+")").addClass('st-slider-active');
+                $(".st-slider ul li:eq("+SelectedItemPrev+")").addClass('st-slider-pre');
+                
+            });
+            $('.st-slider-pre').on('click',function(){
+                var stList = $('.st-slider ul').children('li').length;
+                var SelectedItem;
+                var SelectedItemPrev;
+                for (var i = 0; i< stList; i++){
+                    
+                    if($(".st-slider ul li:eq("+i+")").hasClass('st-slider-active')){
+                       SelectedItem = i;
+                    }
+                }
+                console.log(SelectedItem);
+                $('.st-slider ul li').removeClass('st-slider-active');
+                $('.st-slider ul li').removeClass('st-slider-pre');
+                
+                if(SelectedItem == 0){
+                    SelectedItem = (stList-1);
+                    SelectedItemPrev = (stList-2);
+                }else{
+                    SelectedItem = (SelectedItem-1);
+                    SelectedItemPrev = (SelectedItem-1);
+                }
+                
+                $(".st-slider ul li:eq("+SelectedItem+")").addClass('st-slider-active');
+                $(".st-slider ul li:eq("+SelectedItemPrev+")").addClass('st-slider-pre');
+                
+            });
+        </script>
+    </body>
+</html>

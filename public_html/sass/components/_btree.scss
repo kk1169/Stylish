@@ -1,0 +1,58 @@
+.st-btree{
+    position: relative;
+    float: left;
+    display: block;
+    width:100%;
+    
+    ul{
+        display: block;
+        margin-left:auto;
+        margin-right:auto;
+        
+        li{
+            float:left;
+            display:block;
+            
+            
+            a{
+                position: relative;
+                display: block;
+                margin-left:auto;
+                margin-right: auto;
+                padding: 15px;
+                width: 100px;
+                text-align: center;
+                border:1px solid #ddd;
+                
+                &:after{    
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    background-color: #ddd;
+                    height: 2px;
+                }
+            }
+            
+        }
+    }
+    
+    ul{
+        li{
+            
+            
+            &:nth-of-type(2n) {
+                a{
+                    color:Red;
+                }
+                
+            }
+/*            &:nth-child(even){
+                a{
+                    color:green;
+                }
+            }*/
+
+
+        }
+    }
+}

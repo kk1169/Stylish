@@ -51,4 +51,21 @@
         padding: 6px 12px;
         font-size: 12px;
     }
+    
+/*    &:focus{
+        &:after{
+            content: '';
+            border-radius: 60%;
+            background-color: rgba(0,0,0,0.1);
+            position: absolute;
+            box-sizing: border-box;
+            top: 9px;
+            left: 9px;
+            width: 1.8px;
+            height: 1.8px;
+            animation: ripple 1s ease-out;
+            transform: scale(0, 0);
+        } 
+    }
+    */
 }

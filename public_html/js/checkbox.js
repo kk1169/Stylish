@@ -11,13 +11,22 @@
             });
             
             $(t).on('click',function(){
-                
+                var thisID = $(this).attr('id');
                 if($(this).hasClass('st-active-checkbox')){
+                    $(this).addClass('ripple-animate');
                     $(this).removeClass('st-active-checkbox');
                 }else{
+                    $(this).addClass('ripple-animate');
                     $(this).addClass('st-active-checkbox');
                 }
+                
+                setTimeout(function(){
+                    $('#'+thisID).removeClass('ripple-animate');
+                },500);
             });
+            
+            
+            
             
 
         }
