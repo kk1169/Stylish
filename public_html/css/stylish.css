@@ -31,7 +31,7 @@ and open the template in the editor.
 .z-depth-3 {
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3); }
 
-.z-depth-4, .st-model .st-model-dialog .st-model-content {
+.z-depth-4, .st-model .st-model-dialog .st-model-content, .st-popup .st-popup-dilog .st-popup-content {
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3); }
 
 .z-depth-5 {
@@ -2040,5 +2040,53 @@ body {
                 }*/ }
     .st-btree ul li:nth-of-type(2n) a {
       color: Red; }
+
+.st-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .st-popup .st-popup-dilog {
+    position: relative;
+    width: 30%;
+    margin-left: auto;
+    transform: translateY(25px);
+    animation-name: popup-fade;
+    animation-duration: 0.3s;
+    margin-right: auto;
+    display: block; }
+    .st-popup .st-popup-dilog .st-popup-content {
+      float: left;
+      width: 100%;
+      display: block;
+      background-color: #fff; }
+      .st-popup .st-popup-dilog .st-popup-content .st-popup-header {
+        float: left;
+        display: block;
+        width: 100%;
+        padding: 15px;
+        border-bottom: 1px solid #ddd; }
+      .st-popup .st-popup-dilog .st-popup-content .st-popup-body {
+        float: left;
+        display: block;
+        width: 100%;
+        padding: 15px; }
+      .st-popup .st-popup-dilog .st-popup-content .st-popup-footer {
+        float: left;
+        display: block;
+        width: 100%;
+        padding: 15px;
+        border-top: 1px solid #ddd; }
+
+@keyframes popup-fade {
+  0% {
+    transform: translateY(-25px);
+    opacity: 0.8; }
+  100% {
+    transform: translateY(25px);
+    opacity: 1; } }
 
 /*# sourceMappingURL=stylish.css.map */

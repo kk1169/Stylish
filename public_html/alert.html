@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/stylish.css?v=1.0.1" rel="stylesheet" type="text/css"/>
+        <script src="plugins/jquery/jquery.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        
+        
+        <div class="container-fluid">
+            <div class="row">
+                
+                <button id="thisbtn" class="btn btn-primary btn-outline">Alert Box</button>
+                
+                
+            </div>
+        </div>
+        <script src="js/stylish.js" type="text/javascript"></script>
+        
+        
+        <script>
+            
+            
+                
+                function he(){
+                    alert('ok');
+                }
+            $(document).ready(function(){
+                
+                $('#thisbtn').click(function(){
+                    
+                    
+                    STPopup({
+                        target : 'alert',
+                        header : 'Message Alert',
+                        message : 'Please! fill all values'
+                    });
+                    
+                });
+            });
+            
+        </script>
+    </body>
+</html>

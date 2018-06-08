@@ -364,3 +364,69 @@ $(document).ready(function(){
     });
     
 }(jQuery));
+
+
+//POPUP
+(function ($) {
+    
+    var methods = {
+        initi : function(data){
+            //var popupSelector = t.selector;
+            
+            
+            //SETTING VALUES
+            var popupTarget = data.target;
+            var popupMessage = data.message;
+            var popupHeader = data.header;
+            var popupSaved = data.saved;
+            
+            var element =   '<div class="st-popup"> '+
+                            '   <div class="st-popup-dilog"> '+
+                            '       <div class="st-popup-content"> ';
+                
+            //HEADER SETTING
+            if(popupHeader != undefined){     
+                element = element + '   <div class="st-popup-header">'+popupHeader+'</div> ';
+            }     
+            
+            //BODY SETTING
+             element = element + '   <div class="st-popup-body">'+popupMessage+'</div> '+
+                            '           <div class="st-popup-footer"> ';
+            
+            //ACTION SETTING
+            if(popupTarget == 'alert'){
+                element = element + '   <button class="btn btn-default st-popup-ok" onclick="'+popupSaved+'">OK</button> ';
+            }else if(popupTarget == 'confirm'){
+                element = element + '   <button class="btn btn-default st-popup-saved" onclick="'+popupSaved+'">Save</button> ';
+                element = element + '   <button class="btn btn-default st-popup-cancel">Cancel</button> ';
+            }
+                    
+            element = element +   '       </div> '+
+                            '       </div> '+
+                            '   </div> '+
+                            '</div>';
+                    
+            
+            $(document).on('click','.st-popup-cancel, .st-popup-saved, .st-popup-ok',function(e){
+                e.preventDefault();
+                $('.st-popup').hide();
+                $('.st-popup').remove();
+                
+            });
+            
+            $('body').append(element);
+
+        }
+      
+    };
+    
+//    $.fn.STPopup = function(data) {     
+//        methods.initi(this,data);
+//    };
+
+    STPopup = function(data){
+        methods.initi(data);
+    }
+
+    
+}(jQuery)); 
