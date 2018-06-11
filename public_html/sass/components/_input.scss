@@ -136,10 +136,12 @@
             text-align: center;
             width: 40px;
             line-height: 35px;
-            border-right: 1px solid color("default","darken-1");
+            //border-right: 1px solid color("default","darken-1");
+            border-right:transparent;
             
             &.st-focused-icon{
                 border-right: 1px solid color("primary","primary");
+                border-right:transparent;
             }
         }
     }

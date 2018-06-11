@@ -129,6 +129,52 @@ body {
   100% {
     opacity: 0;
     transform: scale(35, 35); } }
+/*ANIMATION FADE*/
+.animation-fade [class*='animation-delay-'] {
+  animation-name: fade;
+  animation-timing-function: ease-in-out; }
+.animation-fade .animation-delay-0 {
+  animation-delay: 0s;
+  animation-duration: 1s; }
+.animation-fade .animation-delay-1 {
+  animation-delay: 1s;
+  animation-duration: 1s; }
+.animation-fade .animation-delay-2 {
+  animation-delay: 2s;
+  animation-duration: 1s; }
+.animation-fade .animation-delay-3 {
+  animation-delay: 3s;
+  animation-duration: 1s; }
+.animation-fade .animation-delay-4 {
+  animation-delay: 4s;
+  animation-duration: 1s; }
+.animation-fade .animation-delay-5 {
+  animation-delay: 5s;
+  animation-duration: 1s; }
+.animation-fade .animation-delay-6 {
+  animation-delay: 6s;
+  animation-duration: 1s; }
+
+@keyframes fade {
+  /*    0%{
+          opacity:1
+      }
+      25%{
+          opacity:0.2
+      }
+      50%{
+          opacity:0.5
+      }
+      50%{
+          opacity:0.8
+      }
+      100%{
+          opacity:1
+      }*/
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .container-fluid {
   width: 100%;
   padding-right: 15px;
@@ -584,9 +630,10 @@ body {
     text-align: center;
     width: 40px;
     line-height: 35px;
-    border-right: 1px solid #cfcfcf; }
+    border-right: transparent; }
     .st-form-group.st-addon i.st-focused-icon {
-      border-right: 1px solid; }
+      border-right: 1px solid;
+      border-right: transparent; }
   .st-form-group.st-form-sm .form-control {
     height: 30px;
     padding: 0 8px 0 8px;
@@ -1245,7 +1292,9 @@ body {
 .st-slider {
   display: block;
   float: left;
-  width: 100%; }
+  width: 100%;
+  position: relative;
+  border: 1px solid #aaa; }
   .st-slider ul {
     width: 100%;
     margin: 0;
@@ -1265,7 +1314,6 @@ body {
       visibility: hidden;
       transform: translateX(100%);
       transition: 1s ease all;
-      border: 1px solid #aaa;
       background-color: #fff; }
       .st-slider ul li.st-slider-active {
         visibility: visible;
@@ -1276,11 +1324,35 @@ body {
       .st-slider ul li.st-slider-pre {
         transform: translateX(-100%); }
   .st-slider .st-slider-indicators {
+    position: absolute;
     display: block;
     float: left;
-    width: 100%; }
+    width: 100%;
+    top: 45%; }
     .st-slider .st-slider-indicators button {
-      float: left; }
+      background-color: transparent;
+      border: none;
+      outline: 0;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 50%; }
+      .st-slider .st-slider-indicators button.st-slider-pre {
+        float: left;
+        margin-left: 20px; }
+        .st-slider .st-slider-indicators button.st-slider-pre .material-icons {
+          margin-left: -2px;
+          margin-top: 3px;
+          transform: rotate(180deg); }
+      .st-slider .st-slider-indicators button.st-slider-next {
+        float: right;
+        margin-right: 20px; }
+        .st-slider .st-slider-indicators button.st-slider-next .material-icons {
+          margin-right: -2px;
+          margin-top: 3px; }
+      .st-slider .st-slider-indicators button:hover {
+        background-color: rgba(0, 0, 0, 0.5); }
 
 @keyframes slidy {
   0% {
@@ -2054,7 +2126,7 @@ body {
     width: 30%;
     margin-left: auto;
     transform: translateY(25px);
-    animation-name: popup-fade;
+    animation-name: popup-fade-down;
     animation-duration: 0.3s;
     margin-right: auto;
     display: block; }
@@ -2081,12 +2153,25 @@ body {
         padding: 15px;
         border-top: 1px solid #ddd; }
 
-@keyframes popup-fade {
+.popup-fade-up .st-popup-dilog {
+  opacity: 0 !important;
+  transform: translateY(-25px) !important;
+  animation-name: popup-fade-up !important;
+  animation-duration: 0.3s !important; }
+
+@keyframes popup-fade-down {
   0% {
     transform: translateY(-25px);
     opacity: 0.8; }
   100% {
     transform: translateY(25px);
     opacity: 1; } }
+@keyframes popup-fade-up {
+  0% {
+    transform: translateY(25px);
+    opacity: 1; }
+  100% {
+    transform: translateY(-25px);
+    opacity: 0; } }
 
 /*# sourceMappingURL=stylish.css.map */

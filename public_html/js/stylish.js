@@ -409,8 +409,10 @@ $(document).ready(function(){
             
             $(document).on('click','.st-popup-cancel, .st-popup-saved, .st-popup-ok',function(e){
                 e.preventDefault();
-                $('.st-popup').hide();
-                $('.st-popup').remove();
+                $('.st-popup').addClass('popup-fade-up');
+                setTimeout(function(){
+                    $('.st-popup').remove();
+                },500);
                 
             });
             
@@ -420,13 +422,10 @@ $(document).ready(function(){
       
     };
     
-//    $.fn.STPopup = function(data) {     
-//        methods.initi(this,data);
-//    };
-
     STPopup = function(data){
         methods.initi(data);
     }
 
     
 }(jQuery)); 
+

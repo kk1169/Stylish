@@ -12,7 +12,7 @@
         width:30%;
         margin-left:auto;
         transform: translateY(25px);
-        animation-name: popup-fade;
+        animation-name: popup-fade-down;
         animation-duration: 0.3s;
         margin-right:auto;
         display: block;
@@ -52,8 +52,17 @@
     
 }
 
+.popup-fade-up{    
+    .st-popup-dilog{
+        opacity: 0 !important;
+        transform: translateY(-25px) !important;
+        animation-name: popup-fade-up !important;
+        animation-duration: 0.3s !important;
+    }
+}
 
-@keyframes popup-fade { 
+
+@keyframes popup-fade-down { 
     0% {
         transform: translateY(-25px);
         opacity: 0.8;
@@ -61,5 +70,15 @@
     100% { 
         transform: translateY(25px);
         opacity: 1;
+    }
+}
+@keyframes popup-fade-up { 
+    0% {
+        transform: translateY(25px);
+        opacity: 1;
+    }
+    100% { 
+        transform: translateY(-25px);
+        opacity: 0;
     }
 }

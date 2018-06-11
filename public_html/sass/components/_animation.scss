@@ -1,3 +1,13 @@
+$animation-string :(
+    "0"
+    "1"
+    "2"
+    "3"
+    "4"
+    "5"
+    "6"
+);
+
 .ripple-animate{
     
     & + .st-checkbox-label{
@@ -50,4 +60,55 @@
     opacity: 0;
     transform: scale(35, 35);
   }
+}
+
+
+
+
+
+.animation-block{
+    
+}
+
+/*ANIMATION FADE*/
+.animation-fade{
+    
+    
+    [class*='animation-delay-'] {
+        animation-name: fade;
+        animation-timing-function: ease-in-out;
+    }
+    
+    @each $delay in $animation-string{ 
+        .animation-delay-#{$delay}{
+            animation-delay: #{$delay}s;
+            animation-duration: 1s;
+        }
+    }
+}
+
+@keyframes fade {
+/*    0%{
+        opacity:1
+    }
+    25%{
+        opacity:0.2
+    }
+    50%{
+        opacity:0.5
+    }
+    50%{
+        opacity:0.8
+    }
+    100%{
+        opacity:1
+    }*/
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
 }
