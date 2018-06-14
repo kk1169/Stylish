@@ -1,0 +1,44 @@
+[data-toggle="tooltip"]
+{
+    position: relative;
+}
+.st-tooltip{
+    position: absolute;
+    display: block;
+    padding:10px 20px 10px 20px;
+    background-color: rgb(0,0,0);
+    transform: translateY(3px);
+    animation-name: tooltipAni;
+    animation-duration:0.2s;
+    animation-timing-function: ease-in-out;
+    color:#fff;
+    
+    &:hover{
+        transform: translateY(3px);
+    }
+    
+    
+    &:before{
+        content: "";
+        display: block;
+        border-top: 9px solid transparent;
+        border-left: 9px solid transparent;
+        border-right: 9px solid transparent;
+        border-bottom: 9px solid #000;
+        top: -18px;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@keyframes tooltipAni{
+    0%{
+        opacity:0.5;
+        transform: translateY(-3px);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(5px);
+    }
+}

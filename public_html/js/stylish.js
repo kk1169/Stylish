@@ -429,3 +429,45 @@ $(document).ready(function(){
     
 }(jQuery)); 
 
+
+
+//SWITCH
+(function ($) {
+    
+    var methods = {
+        initi : function(t){
+            
+            var switchChild = $(t).children('p').children();
+            
+            $(t).each(function(){
+                var rndno = Math.ceil(Math.random() * (999999 - 0) + 0);
+                $(this).attr('id','st-switch-'+rndno);
+            });
+            
+            $(switchChild).on('click',function(){
+                
+                $(switchChild).removeClass('active');
+                $(this).addClass('active');
+                
+                if($(this).text() == 'On' || $(this).text() == 'Yes'){
+                    $(this).parent().siblings('input').val('1');
+                }else{
+                    $(this).parent().siblings('input').val('0');
+                }
+                
+            });
+        }
+      
+    };
+    
+    $.fn.STSwitch = function(){
+        methods.initi(this);
+    }
+
+
+    
+    $(document).ready(function(){
+        $('.st-switch').STSwitch(this);
+    });
+    
+}(jQuery)); 
