@@ -98,6 +98,12 @@
         padding: 0 10px 0 10px;
         font-size:15px;
         border:1px solid color("default","darken-1");
+        &::-webkit-input-placeholder {
+            color: color("default","darken-3");
+        }
+        &:-ms-input-placeholder {
+            color: color("default","darken-3");
+        }
         &::placeholder {
             color: color("default","darken-3");
         }
@@ -199,7 +205,6 @@
             width: 8px;
             height: 15px;
             border-top: 2px solid transparent;
-            -ms-transform: rotate(45deg);
             -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
             border-left: 2px solid transparent;
@@ -273,7 +278,6 @@
             width: 8px;
             height: 15px;
             border-top: 2px solid transparent;
-            -ms-transform: rotate(45deg);
             -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
             border-left: 2px solid transparent;

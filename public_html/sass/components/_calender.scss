@@ -1,0 +1,143 @@
+.st-calender{
+    float: left;
+    display: block;
+    user-select:none;
+    background-color: #fff;
+    width: 265px;
+    @extend .z-depth-1;
+    
+    .st-calender-header{
+        width: 100%;
+        float: left;
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        padding-left:10px;
+        padding-right:10px;
+        
+        .st-calender-t{
+            float: left;
+            display: block;
+            cursor: pointer;
+        }
+        
+        .st-calender-nav{
+            float: right;
+            display: block;
+            
+            span.material-icons{
+                cursor: pointer;
+                line-height: 40px;
+                
+                &.next{
+                    transform: rotate(180deg)
+                }
+            }
+        }
+    }
+    
+    .st-calender-month{
+        width:100%;
+        float:left;
+        display:none;
+        padding:0px 10px 10px 10px;
+        
+        table{
+            width:100%;
+            float: left;
+            
+            td{
+                width:24%;
+                height:50px;
+                cursor: pointer;
+                vertical-align: middle;
+                text-align: center;
+                border:2px solid transparent;
+                transition:0.2s ease-in-out;
+                
+                &:hover, &:focus{
+                    background-color:#f5f5f5;
+                }
+                
+                
+            }
+        }
+    }
+    .st-calender-year{
+        width:100%;
+        float:left;
+        display:none;
+        height: 210px;
+        overflow-y: hidden;
+        padding:0px 10px 10px 10px;
+        
+        table{
+            width:100%;
+            float: left;
+            
+            td{
+                width:24%;
+                height:50px;
+                cursor: pointer;
+                vertical-align: middle;
+                text-align: center;
+                border:2px solid transparent;
+                transition:0.2s ease-in-out;
+                
+                &:hover, &:focus{
+                    background-color:#f5f5f5;
+                }
+                
+                
+            }
+        }
+    }
+    
+    .st-calender-body{
+        width:100%;
+        float:left;
+        display:block;
+        padding:0px 10px 10px 10px;
+        
+        table{
+            margin:0;
+            padding:0;
+            
+            th,td{
+                width:35px;
+                height:35px;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            th{
+                font-size: 12px;
+            }
+
+            td{
+                border:2px solid transparent;
+
+                &.inMonth{
+
+                    cursor: pointer;
+                    &:hover, &:focus{
+                        background-color:#f5f5f5;
+                    }
+                }
+                
+                &.curDate{
+                    cursor: pointer;
+                    background-color: blueviolet;
+                    color:#fff;
+                }
+
+                &.lastMonth, &.nextMonth{
+                    opacity: 0.2;
+                }
+            }
+
+        }
+    }
+    
+}
+
